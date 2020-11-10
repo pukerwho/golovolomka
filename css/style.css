@@ -61953,6 +61953,65 @@ input[type="submit"] {
 .header-menu__desktop .current_page_item a {
   background: var(--light-bg-color); }
 
+.header-menu__desktop .menu-item-has-children {
+  position: relative; }
+  .header-menu__desktop .menu-item-has-children > a:after {
+    content: '';
+    width: 15px;
+    height: 12px;
+    position: relative;
+    top: 0;
+    right: -5px;
+    background: url("../img/icons/arrow-down.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    -webkit-transform: rotate(0);
+    -ms-transform: rotate(0);
+    transform: rotate(0);
+    display: inline-block;
+    -webkit-transition: -webkit-transform .2s;
+    transition: -webkit-transform .2s;
+    -o-transition: transform .2s;
+    transition: transform .2s;
+    transition: transform .2s, -webkit-transform .2s; }
+  .header-menu__desktop .menu-item-has-children > a:hover:after {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg); }
+  .header-menu__desktop .menu-item-has-children:hover .sub-menu {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0); }
+
+.header-menu__desktop .sub-menu {
+  display: block;
+  position: absolute;
+  visibility: hidden;
+  z-index: 100;
+  opacity: 0;
+  -webkit-transition: 100ms ease-in-out;
+  -o-transition: 100ms ease-in-out;
+  transition: 100ms ease-in-out;
+  -webkit-transform: translateY(15px);
+  -ms-transform: translateY(15px);
+  transform: translateY(15px);
+  background: #ffffff;
+  -webkit-box-shadow: 0 3px 5px rgba(50, 50, 50, 0.25);
+  box-shadow: 0 3px 5px rgba(50, 50, 50, 0.25);
+  left: 20px;
+  top: 100%;
+  text-align: left;
+  padding: 5px 0; }
+  .header-menu__desktop .sub-menu li {
+    width: auto;
+    display: block;
+    margin: 0 0.25rem; }
+  .header-menu__desktop .sub-menu a {
+    display: block;
+    white-space: nowrap; }
+
 .header-menu__mobile {
   position: relative; }
   .header-menu__mobile .menu-line {
