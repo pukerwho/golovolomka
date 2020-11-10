@@ -75,6 +75,7 @@
         $categories = get_terms( [
           'taxonomy' => 'category',
           'parent' => 0,
+          'hide_empty' => false,
         ] );
 
         foreach($categories as $cat): ?>
