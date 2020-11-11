@@ -187,10 +187,9 @@ function crunchify_social_sharing_buttons($content) {
  
     // Construct sharing URL without using any script
     $twitterURL = 'https://twitter.com/intent/tweet?text='.$crunchifyTitle.'&amp;url='.$crunchifyURL.'&amp;via=Crunchify';
+    $telegramURL = 'https://t.me/share/url?url='. $crunchifyURL .'&text='. $crunchifyTitle .'';
     $facebookURL = 'https://www.facebook.com/sharer/sharer.php?u='.$crunchifyURL;
-    $googleURL = 'https://plus.google.com/share?url='.$crunchifyURL;
-    $bufferURL = 'https://bufferapp.com/add?url='.$crunchifyURL.'&amp;text='.$crunchifyTitle;
-    $linkedInURL = 'https://www.linkedin.com/shareArticle?mini=true&url='.$crunchifyURL.'&amp;title='.$crunchifyTitle;
+    $viberURL = 'viber://pa?chatURI='. $crunchifyURL .'';
  
     // Based on popular demand added Pinterest too
     $pinterestURL = 'https://pinterest.com/pin/create/button/?url='.$crunchifyURL.'&amp;media='.$crunchifyThumbnail[0].'&amp;description='.$crunchifyTitle;

@@ -49,14 +49,17 @@
 							<!-- Тайтл -->
 							<h1 itemprop="headline" class="text-3xl font-bold mb-5"><?php the_title(); ?></h1>
 
-							<!-- Категории -->
+							<!-- Хештеги -->
 							<div class="post-categories -mx-1 mb-5">
-								<?php $categories = get_categories();
-								foreach($categories as $category): ?>
-								 	<a href="<?php echo get_category_link($category->term_id) ?>" class="post-categories__link mx-1 p-2 rounded-md">
-								 		<?php echo $category->name ?>
-								 	</a>
-								<?php endforeach; ?>	
+								<?php 
+						    $post_tags = wp_get_post_terms(  get_the_ID() , 'hashtags', array( 'parent' => 0 ) );
+						    foreach($post_tags as $post_tag): ?>
+						    	<?php if ($post_tag): ?>
+						    		<a href="<?php echo get_term_link( $post_tag->term_id ); ?>" class="post-categories__link mx-1 p-2 rounded-md">
+									 		<?php echo $post_tag->name; ?>
+									 	</a>
+									<?php endif; ?>
+								<?php endforeach; ?>
 							</div>
 
 							<!-- Автор -->
