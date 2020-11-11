@@ -6,7 +6,7 @@ use Carbon_Fields\Field;
 add_action( 'carbon_fields_register_fields', 'crb_categories_options' );
 function crb_categories_options() {
   Container::make( 'term_meta', __( 'Term Options', 'crb' ) )
-    ->where( 'term_taxonomy', '=', 'category' )
+    ->where( 'term_taxonomy', 'IN', array('category', 'hashtags') )
     ->add_fields( array(
     	Field::make( 'image', 'crb_category_icon', 'Иконка' )->set_value_type( 'url'),
       Field::make( 'textarea', 'crb_category_description', 'Описание' ),
