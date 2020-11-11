@@ -31,6 +31,7 @@ require_once get_template_directory() . '/inc/custom-fields/pages-meta.php';
 require_once get_template_directory() . '/inc/custom-fields/user-meta.php';
 require_once get_template_directory() . '/inc/custom-fields/category-meta.php';
 require_once get_template_directory() . '/inc/custom-fields/menu-meta.php';
+require_once get_template_directory() . '/inc/shortcodes.php';
 require_once get_template_directory() . '/inc/TGM/example.php';
 
 

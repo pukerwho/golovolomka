@@ -1,0 +1,30 @@
+.list_number {
+	color: #1a202c;
+	font-size: 1.5rem;
+	background-color: rgba(26, 32, 44, 0.2);
+	border-radius: 0.25rem;
+	padding: 0.5rem 1rem;
+}
+
+.notice {
+	&_green {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: center;
+		-webkit-align-items: center;
+		-ms-flex-align: center;
+		align-items: center;
+		position: relative;
+		color: #ffffff;
+		font-size: 1.5rem;
+		background-color: #70c37f;
+		padding: 2rem;
+		img {
+			width: 55px;
+			height: 55px;
+			margin-right: 1.5rem;
+		}
+	}
+}
