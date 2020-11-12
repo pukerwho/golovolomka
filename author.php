@@ -46,7 +46,7 @@ $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : g
 				<?php _e('Биография', 'totop'); ?>	
 			</div>
 			<div>
-				
+				<?php echo carbon_get_user_meta( get_the_author_meta( 'ID' ), 'crb_user_twitter' ); ?>
 			</div>
 
 		</div>
