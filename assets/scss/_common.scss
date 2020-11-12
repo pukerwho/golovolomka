@@ -35,6 +35,29 @@ input[type="submit"] {
 	cursor: pointer;
 }
 
+blockquote {
+	border-left: 0.25rem solid var(--main-dark-color);
+	padding-left: 1rem;
+}
+
+article {
+	a {
+		color: var(--link-color);
+	}
+	ul {
+		margin-left: 1rem;
+		margin-bottom: 1rem;
+	}
+	li {
+		font-size: 1.25rem;
+		list-style-type: disc;
+	}
+}
+
+.color-link {
+	color: var(--link-color);
+}
+
 .bg-custom-blue {
 	background: var(--blue-color);
 }

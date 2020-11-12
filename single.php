@@ -77,7 +77,7 @@
 									</div>	
 									<div class="post-author__info">
 										<div class="post-author__name">
-											<?php echo get_the_author(); ?>
+											<a href="<?php echo get_author_posts_url(get_the_author_meta( 'ID' )); ?>"><?php echo get_the_author(); ?></a>
 										</div>
 										<div class="flex">
 											<?php if(!empty(carbon_get_user_meta( get_the_author_meta( 'ID' ), 'crb_user_facebook' ))) { ?>

@@ -8,6 +8,7 @@
 		&__img {
 			height: 350px;
 			display: none;
+			-o-object-fit: cover;
 			object-fit: cover;
 			@include for-phone {
 				height: 250px;
@@ -19,6 +20,7 @@
 	}
 	&-categories {
 		&__link {
+			color: var(--main-dark-color);
 			background: var(--main-bg-color);
 			font-size: 0.85rem;
 		}
@@ -71,7 +73,16 @@
 	margin: 1rem 0;
 }
 .comment-reply-title {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	-ms-flex-pack: justify;
 	justify-content: space-between;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
 	align-items: center;
 }

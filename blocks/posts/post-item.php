@@ -17,7 +17,7 @@
 			</div>	
 			<div class="post-author__info">
 				<div class="post-author__name">
-					<?php echo get_the_author(); ?>
+					<a href="<?php echo get_author_posts_url(get_the_author_meta( 'ID' )); ?>" class="color-link"><?php echo get_the_author(); ?></a>
 				</div>
 				<div class="post-item__date text-sm">
 					<?php echo get_the_modified_time('j/n/Y') ?>

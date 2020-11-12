@@ -48,6 +48,13 @@ function theme_name_scripts() {
     wp_enqueue_script( 'scripts', get_template_directory_uri() . '/js/all.js', '','',true);
 };
 
+// подключаем стили к админке
+add_action( 'admin_enqueue_scripts', 'load_admin_styles' );
+function load_admin_styles() {
+  wp_enqueue_style( 'admin-style', get_template_directory_uri() . '/css/admin-style.css', false, '1.0.0' );
+}
+
+
 function my_login_logo() { ?>
   <style type="text/css">
     #login h1 a, .login h1 a {
