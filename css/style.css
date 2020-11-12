@@ -61940,7 +61940,7 @@ blockquote {
 article a {
   color: var(--link-color); }
 
-article ul {
+article ul, article ol {
   margin-left: 1rem;
   margin-bottom: 1rem; }
 
@@ -62123,6 +62123,7 @@ article {
 
 .breadcrumbs-item {
   position: relative;
+  list-style-type: none;
   margin-right: 1.25rem; }
   .breadcrumbs-item:after {
     content: '';

@@ -172,6 +172,7 @@ article {
 .breadcrumbs {
 	&-item {
 		position: relative;
+		list-style-type: none;
 		margin-right: 1.25rem;
 		&:after {
 			content: '';
