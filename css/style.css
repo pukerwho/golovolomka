@@ -62139,6 +62139,9 @@ article {
   .breadcrumbs-item:last-of-type:after {
     content: none; }
 
+.breadcrumbs ul {
+  margin: 0; }
+
 .breadcrumbs-link {
   color: var(--main-dark-color);
   margin-right: 0.25rem; }
