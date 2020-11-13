@@ -5,9 +5,9 @@ $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : g
 ?>
 
 <div class="container mx-auto px-2 lg:px-0 py-5">
-	<div class="flex w-full lg:w-4/5 mx-auto">
+	<div class="flex w-full lg:w-4/5 flex-col lg:flex-row mx-auto">
 		<div class="w-full lg:w-1/3 mr-6">
-			<div class="author-info bg-custom-gray flex items-center flex-col rounded-md border-custom-gray shadow-sm py-4">
+			<div class="author-info bg-custom-gray flex items-center flex-col rounded-md border-custom-gray shadow-sm py-4 mb-6 lg:mb-0">
 				<div class="author-avatar mb-4">
 					<?php 
 						$avatar = get_avatar(get_the_author_meta('ID'));
@@ -18,7 +18,7 @@ $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : g
 				    <img src="<?php bloginfo('template_part'); ?>/img/user.svg">
 				  <?php endif; ?>
 				</div>
-				<h1 class="text-2xl mb-2"><?php echo $curauth->nickname; ?></h1>
+				<h1 class="text-2xl mb-2"><?php echo $curauth->display_name; ?></h1>
 				<div class="flex -mx-1">
 					<?php if(!empty(carbon_get_user_meta( get_the_author_meta( 'ID' ), 'crb_user_facebook' ))) { ?>
 					<div class="mx-1">
@@ -43,7 +43,7 @@ $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : g
 				</div>
 			</div>
 		</div>
-		<div class="w-2/3">
+		<div class="w-full lg:w-2/3">
 			<div class="text-2xl mb-2">
 				<?php _e('Биография', 'totop'); ?>	
 			</div>
@@ -61,8 +61,10 @@ $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : g
 					'post_type' => 'post', 
 					'posts_per_page' => 10,
 					'paged' => $current_page,
+					'author__in'=> get_the_author_meta( 'ID' ), 
 					'orderby' => 'date',
 					'order' => 'DESC',
+
 				));
 				if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
 					<?php get_template_part('blocks/posts/post-item', 'timeto'); ?>
