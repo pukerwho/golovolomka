@@ -27,7 +27,7 @@
 		
 	  <!-- TITLE -->
 	  <div class="post-item__content">
-			<div class="post-item__title text-xl lg:text-3xl mb-5">
+			<div class="post-item__title text-xl lg:text-2xl mb-5">
 				<a href="<?php the_permalink(); ?>" class="hover:text-blue-900"><?php the_title(); ?>	</a>
 			</div>
 

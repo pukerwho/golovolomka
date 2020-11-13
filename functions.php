@@ -54,6 +54,7 @@ function load_admin_styles() {
   wp_enqueue_style( 'admin-style', get_template_directory_uri() . '/css/admin-style.css', false, '1.0.0' );
 }
 
+remove_action( 'wp_head', '_wp_render_title_tag', 1 );
 
 function my_login_logo() { ?>
   <style type="text/css">

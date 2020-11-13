@@ -55,8 +55,10 @@ article {
 		margin-bottom: 1rem;
 	}
 	ol[start] {
+		margin-left: 1.3rem;
 		li {
 			list-style-type: decimal;
+			margin-bottom: 0.5rem;
 		}
 	}
 	li {

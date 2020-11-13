@@ -4,7 +4,7 @@
 	<div class="post py-4">
 		<div class="container mx-auto px-2 lg:px-0">
 			<div class="flex flex-col lg:flex-row">
-				<aside class="w-1/12 hidden  lg:flex justify-center mt-6">
+				<aside class="w-1/12 hidden lg:flex justify-center mt-6">
 					<div>
 						<?php do_action('show_social_share_buttons'); ?>	
 					</div>

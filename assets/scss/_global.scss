@@ -137,10 +137,6 @@
 	}
 }
 
-article {
-	border: 1px solid #d7d9d9;
-}
-
 .sidebar {
 	&-block {
 		background: var(--light-bg-color);
@@ -246,6 +242,24 @@ article {
 	    -ms-transform: rotate(180deg);
 	    transform: rotate(180deg);
 		}
+	}
+}
+
+.author {
+	.post-item:first-of-type {
+		.post-item__img {
+			display: none;
+		}
+	}
+	&-avater {
+		img {
+			border-radius: 50%;
+		}
+	}
+	&-info {
+		position: -webkit-sticky;
+		position: sticky;
+		top: 1rem;
 	}
 }
 
