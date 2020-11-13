@@ -61919,6 +61919,11 @@ p {
 li {
   list-style-type: none; }
 
+mark {
+  background: -o-linear-gradient(190deg, rgba(250, 247, 133, 0.3), rgba(250, 247, 133, 0.7) 95%, rgba(250, 247, 133, 0.1));
+  background: linear-gradient(-100deg, rgba(250, 247, 133, 0.3), rgba(250, 247, 133, 0.7) 95%, rgba(250, 247, 133, 0.1));
+  border-radius: 1em 0 1em 0; }
+
 input, textarea {
   width: 100%;
   background: var(--white-color);

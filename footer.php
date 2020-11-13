@@ -8,9 +8,9 @@
 	    			<div class="mb-4"><?php _e('Разбираемся в сайтах. Делаем жизнь вебмастера проще. Любим печеньки.', 'totop'); ?></div>
     				<div class="footer-social social mb-4">
     					<ul class="flex items-center">
-    						<li><a href="#"><img src="<?php bloginfo('template_url'); ?>/img/icons/facebook.svg" width="22px"></a></li>
-    						<li class="px-4"><a href="#"><img src="<?php bloginfo('template_url'); ?>/img/icons/instagram.svg" width="22px"></a></li>
-    						<li><a href="#"><img src="<?php bloginfo('template_url'); ?>/img/icons/youtube.svg" width="25px"></a></li>
+    						<li><a href="https://www.facebook.com/time2top" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/icons/facebook.svg" width="22px"></a></li>
+    						<li class="px-4"><a href="https://www.instagram.com/time2top/" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/icons/instagram.svg" width="22px"></a></li>
+    						<li><a href="https://www.youtube.com/channel/UCLFjGPaobP5RrvweG-p_lpA" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/icons/youtube.svg" width="25px"></a></li>
     					</ul>
     				</div>
     				<div>
