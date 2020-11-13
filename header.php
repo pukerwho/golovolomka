@@ -3,8 +3,8 @@
   $title = wp_get_document_title();
   $descr = get_bloginfo('description');
   $keyW = 'создание, продвижение, реклама';
-  $img = THEME_PATH.'/img/soc_img.jpg';
-  $url = SITE_URL;
+  $img = $_SERVER['HTTP_HOST'].'/img/soc_img.jpg';
+  $url = $_SERVER['REQUEST_URI'];
 ?>
 
 <?php if(is_single() || is_page()) {
