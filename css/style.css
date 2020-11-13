@@ -61949,6 +61949,9 @@ article ul, article ol {
   margin-left: 1rem;
   margin-bottom: 1rem; }
 
+article ol[start] li {
+  list-style-type: decimal; }
+
 article li {
   font-size: 1.25rem;
   list-style-type: disc; }
