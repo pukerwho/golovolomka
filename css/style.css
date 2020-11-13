@@ -61968,6 +61968,9 @@ article li {
 .bg-custom-gray {
   background: var(--light-dark-color); }
 
+.border-custom-gray {
+  border: 1px solid var(--border-color); }
+
 .list_number {
   color: #1a202c;
   font-size: 1.5rem;
@@ -62196,7 +62199,7 @@ article li {
 .author .post-item:first-of-type .post-item__img {
   display: none; }
 
-.author-avater img {
+.author-avatar img {
   border-radius: 50%; }
 
 .author-info {

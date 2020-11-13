@@ -7,7 +7,7 @@ $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : g
 <div class="container mx-auto px-2 lg:px-0 py-5">
 	<div class="flex w-full lg:w-4/5 mx-auto">
 		<div class="w-full lg:w-1/3 mr-6">
-			<div class="author-info bg-custom-gray flex items-center flex-col rounded-md shadow-md py-4">
+			<div class="author-info bg-custom-gray flex items-center flex-col rounded-md border-custom-gray shadow-sm py-4">
 				<div class="author-avatar mb-4">
 					<?php 
 						$avatar = get_avatar(get_the_author_meta('ID'));
