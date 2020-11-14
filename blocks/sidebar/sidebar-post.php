@@ -7,7 +7,7 @@
 	} 
 ?>
 
-<div class="post-category__block rounded-md shadow-sm">
+<div class="post-category__block rounded-md shadow-sm mb-6">
 	<div class="post-category__color" style="background: <?php echo carbon_get_term_meta($current_term_id, 'crb_category_color'); ?>"></div>
 	<div class="flex items-end mb-2 px-4 py-2 -mt-6">
 		<div class="post-category__icon mr-4">
@@ -24,5 +24,7 @@
 	<div class="px-4 mb-4">
 		<a href="<?php echo get_term_link($current_term_id, 'category'); ?>" class="block w-full text-white text-center text-md bg-custom-blue rounded-md py-2"><?php _e('Подробнее', 'totop'); ?></a>	
 	</div>
-	
 </div>
+
+<?php get_template_part('blocks/posts/posts-popular'); ?>
+<?php get_template_part('blocks/sidebar/sidebar-telegram'); ?>

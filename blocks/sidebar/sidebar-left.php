@@ -29,7 +29,7 @@
 					<?php _e('Хештеги', 'totop'); ?>
 				</div>
 			</div>
-			<ul>
+			<ul class="mb-10">
 				<?php 
 		    $tags = get_terms( [
 		      'taxonomy' => 'hashtags',
