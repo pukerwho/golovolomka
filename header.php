@@ -76,7 +76,7 @@
   <meta name="twitter:title" content='<?php echo $title; ?>'>
   <meta name="twitter:description" content="<?php echo $descr; ?>"/>
   <meta name="twitter:image:src" content="<?php echo $img; ?>"/>
-  <meta name="twitter:domain" content="<?php echo SITE_URL; ?>"/>
+  <meta name="twitter:domain" content="<?php echo $url; ?>"/>
 
   <!-- Facebook -->
   <meta property="og:type" content="website"/>

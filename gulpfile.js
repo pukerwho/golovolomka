@@ -3,6 +3,8 @@ const sass = require('gulp-sass');
 const inlinesource = require('gulp-inline-source');
 const autoprefixer = require('gulp-autoprefixer');
 const concat = require('gulp-concat');
+const cleanCSS = require('gulp-clean-css');
+
 
 function scss() {
   return src('./assets/scss/**/*.scss')
@@ -15,6 +17,12 @@ function prefix() {
     .pipe(autoprefixer())
     .pipe(dest('./css'));
 }
+
+function minify() {
+  return src('./css/style.css')
+    .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(dest('./css'));
+};
 
 function scripts() {
 	return src('./assets/js/**/*.js')
@@ -29,8 +37,9 @@ function inlinecss() {
 }
 
 exports.prefix = prefix;
+exports.minify = minify;
 exports.scss = scss;
 exports.scripts = scripts;
 exports.inlinecss = inlinecss;
 
-exports.default = series(scss, prefix, scripts);
+exports.default = series(scss, prefix, minify, scripts);

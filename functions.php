@@ -34,7 +34,6 @@ require_once get_template_directory() . '/inc/custom-fields/menu-meta.php';
 require_once get_template_directory() . '/inc/shortcodes.php';
 require_once get_template_directory() . '/inc/TGM/example.php';
 
-
 register_nav_menus( array(
     'head_menu' => 'Меню в шапке',
 ) );
@@ -55,6 +54,18 @@ function load_admin_styles() {
 }
 
 remove_action( 'wp_head', '_wp_render_title_tag', 1 );
+remove_action('wp_head', 'print_emoji_detection_script', 7);
+remove_action('wp_print_styles', 'print_emoji_styles');
+
+add_action('do_feed', 'itsme_disable_feed', 1);
+add_action('do_feed_rdf', 'itsme_disable_feed', 1);
+add_action('do_feed_rss', 'itsme_disable_feed', 1);
+add_action('do_feed_rss2', 'itsme_disable_feed', 1);
+add_action('do_feed_atom', 'itsme_disable_feed', 1);
+add_action('do_feed_rss2_comments', 'itsme_disable_feed', 1);
+add_action('do_feed_atom_comments', 'itsme_disable_feed', 1);
+remove_action( 'wp_head', 'feed_links_extra', 3 );
+remove_action( 'wp_head', 'feed_links', 2 );
 
 function my_login_logo() { ?>
   <style type="text/css">
