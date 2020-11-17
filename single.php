@@ -4,16 +4,11 @@
 	<div class="post py-4">
 		<div class="container mx-auto px-2 lg:px-0">
 			<div class="flex flex-col lg:flex-row">
-				<aside class="w-1/12 hidden lg:flex justify-center mt-6">
-					<div>
-						<?php do_action('show_social_share_buttons'); ?>	
-					</div>
-				</aside>
-				<main class="w-full lg:w-8/12 mx-0 lg:mx-4">
+				<main class="w-full lg:w-9/12 mx-0 lg:mx-4">
 					<article class="bg-white shadow-md rounded-md mb-6">
 						<!-- Заглавное фото -->
 						<img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'large') ?>" alt="" loading="lazy" itemprop="image" class="w-full post-thumb object-cover">
-						<div class="px-6 lg:px-10 py-5">
+						<div class="px-6 lg:px-16 py-5 lg:py-8">
 							<!-- Хлебные крошки -->
 							<div class="mb-5">
 							<?php 
@@ -162,7 +157,7 @@
 				</main>
 				
 				<aside class="w-full lg:w-3/12 sidebar sidebar-right">
-					<?php get_template_part('blocks/sidebar/sidebar-post', 'timeto'); ?>
+					<?php get_template_part('blocks/sidebar/sidebar-post', 'totop'); ?>
 				</aside>
 
 			</div>

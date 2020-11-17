@@ -53,6 +53,9 @@
     		</div>
     	</div>
     </footer>
+    <?php if(is_single()): ?>
+	    <?php get_template_part('blocks/footer/bottom-info', 'totop'); ?>
+	  <?php endif; ?>
     <div class="bg-modal"></div>
     <?php wp_footer(); ?>
 </body>

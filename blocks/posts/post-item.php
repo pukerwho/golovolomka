@@ -2,7 +2,7 @@
 	<!-- IMG -->
 	<img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'full'); ?>" alt="<?php the_title(); ?>	" class="post-item__img w-full mb-2">
 	
-	<div class="p-3">
+	<div class="p-3 pr-6">
 		<!-- AUTHOR -->
 		<div class="post-author flex items-center mb-2">
 			<?php 
