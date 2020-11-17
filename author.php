@@ -18,7 +18,8 @@ $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : g
 				    <img src="<?php bloginfo('template_part'); ?>/img/user.svg">
 				  <?php endif; ?>
 				</div>
-				<h1 class="text-2xl mb-2"><?php echo $curauth->display_name; ?></h1>
+				<h1 class="text-2xl mb-1"><?php echo $curauth->display_name; ?></h1>
+				<div class="text-gray-700 mb-2"><?php echo carbon_get_user_meta( get_the_author_meta( 'ID' ), 'crb_user_who' ); ?></div>
 				<div class="flex -mx-1">
 					<?php if(!empty(carbon_get_user_meta( get_the_author_meta( 'ID' ), 'crb_user_facebook' ))) { ?>
 					<div class="mx-1">
