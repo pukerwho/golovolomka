@@ -307,9 +307,21 @@ footer {
     background: var(--dark-dark-color);
     border-radius: 0.25rem;
     padding: 0.25rem 0.5rem;
+    @include for-phone {
+			width: 45px;
+			height: 45px;	
+		}
+    span {
+    	@include for-phone {
+    		display: none;
+    	}
+    }
 	}
 	&-icon {
 		width: 20px;
+		@include for-phone {
+			width: 25px;
+		}
 	}
 	&-facebook {
 		&:hover {

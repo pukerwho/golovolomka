@@ -1,11 +1,11 @@
 <div class="bottom-info bg-white shadow-lg">
 	<div class="container mx-auto">
-		<div class="flex justify-between py-3">
-			<div class="flex items-center">
-				<span class="text-xl mr-4"><?php _e('Поделиться в', 'totop'); ?>:</span>
+		<div class="flex justify-center lg:justify-between py-3">
+			<div class="flex flex-col lg:flex-row items-center">
+				<span class="text-xl mb-2 mr-0 lg:mb-0 lg:mr-4 "><?php _e('Поделиться в', 'totop'); ?>:</span>
 				<?php do_action('show_social_share_buttons'); ?>	
 			</div>
-			<div>
+			<div class="hidden lg:block">
 				<?php 
 					$next_post = get_previous_post(); 
 					if( ! empty($next_post) ){
