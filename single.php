@@ -99,7 +99,7 @@
 									</div>
 								</div>
 								<div class="post-item__date text-sm">
-									<?php _e('Добавлено', 'totop'); ?>: <?php echo get_the_modified_time('F j, Y') ?>
+									<?php _e('Обновлено', 'totop'); ?>: <?php echo get_the_modified_time('F j, Y') ?>
 								</div>
 							</div>
 
