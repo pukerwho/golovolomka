@@ -55,6 +55,13 @@
 		background: var(--light-bg-color);
 		border: 1px solid var(--border-color);
 	}
+	article {
+		h2 {
+			background: rgba(255, 239, 186, 0.59);
+			text-align: center;
+			padding: 1.25rem;
+		}
+	}
 }
 
 /* !!!Comments!!! */
