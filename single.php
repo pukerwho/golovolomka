@@ -24,17 +24,11 @@
 												</a>                        
 												<meta itemprop="position" content="1">
 											</li>
-											<li itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem' class="breadcrumbs-item">
-												<a itemprop="item" href="<?php get_post_type_archive_link('posts'); ?>" class="breadcrumbs-link text-sm">
-													<span itemprop="name"><?php _e('Публикации', 'totop'); ?></span>
-												</a>                        
-												<meta itemprop="position" content="2">
-											</li>
 							        <li itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem' class="breadcrumbs-item">
 							          <a itemprop="item" href="<?php echo get_term_link($myterm->term_id, 'category') ?>" class="breadcrumbs-link text-sm">
 													<span itemprop="name"><?php echo $myterm->name; ?></span>
 												</a>                       
-												<meta itemprop="position" content="3">
+												<meta itemprop="position" content="2">
 							        </li>
 							      </ul>
 							    </div>
