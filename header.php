@@ -64,7 +64,6 @@
   <link rel="profile" href="http://gmpg.org/xfn/11">
   <link rel="apple-touch-icon" href="/example.png">
   <base href="<?php echo home_url(); ?>">
-  <link rel="alternate" hreflang="x-default" href="<?php echo home_url(); ?>">
 
   <!-- Google Plus -->
   <meta itemprop="name" content='<?php echo $title; ?>'/>
