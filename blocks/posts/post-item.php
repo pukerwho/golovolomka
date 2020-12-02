@@ -1,6 +1,6 @@
 <div class="post-item bg-white shadow-md rounded-md mb-4">
 	<!-- IMG -->
-	<img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'full'); ?>" alt="<?php the_title(); ?>	" class="post-item__img w-full mb-2">
+	<img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'full'); ?>" alt="<?php the_title(); ?>" class="post-item__img w-full mb-2" loading="lazy" itemprop="image">
 	
 	<div class="p-3 pr-6">
 		<!-- AUTHOR -->
