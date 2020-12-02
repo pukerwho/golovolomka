@@ -6,9 +6,9 @@
 		<div class="w-full lg:w-9/12 category-hero bg-white shadow-md rounded-md px-4 lg:px-10 py-8 -mt-16 mb-10 mx-auto">
 			<div>
 				<?php if (carbon_get_term_meta(get_queried_object_id(), 'crb_category_icon')): ?>
-					<img src="<?php echo carbon_get_term_meta(get_queried_object_id(), 'crb_category_icon'); ?>" width="100px" class="category-hero__icon" style="border: 8px solid <?php echo carbon_get_term_meta(get_queried_object_id(), 'crb_category_color'); ?>">
+					<img src="<?php echo carbon_get_term_meta(get_queried_object_id(), 'crb_category_icon'); ?>" width="100" class="category-hero__icon" style="border: 8px solid <?php echo carbon_get_term_meta(get_queried_object_id(), 'crb_category_color'); ?>">
 				<?php else: ?>
-					<img src="<?php bloginfo('template_url'); ?>/img/icons/file.svg" width="100px" class="category-hero__icon" style="border: 8px solid <?php echo carbon_get_term_meta(get_queried_object_id(), 'crb_category_color'); ?>">
+					<img src="<?php bloginfo('template_url'); ?>/img/icons/file.svg" width="100" class="category-hero__icon" style="border: 8px solid <?php echo carbon_get_term_meta(get_queried_object_id(), 'crb_category_color'); ?>">
 				<?php endif; ?>
 			</div>
 			<div class="text-3xl text-left lg:text-center font-bold mt-10 mb-5">
@@ -44,7 +44,7 @@
 				if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
 					<a href="<?php the_permalink(); ?>" class="block mb-10 lg:mb-6">
 						<div class="flex items-start lg:items-center">
-							<img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'thumbnail') ?>" alt="<?php the_title(); ?>	" loading="lazy" class="rounded-full object-cover mr-4" width="80px" height="80px">
+							<img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'thumbnail') ?>" alt="<?php the_title(); ?>	" loading="lazy" class="rounded-full object-cover mr-4" width="80" height="80">
 							<div>
 								<div class="text-xl">
 									<?php the_title(); ?>	

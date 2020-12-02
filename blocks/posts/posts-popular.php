@@ -1,6 +1,6 @@
 <div class="sidebar-block rounded-md shadow-sm mb-4">
 	<div class="sidebar-title flex items-center">
-		<img src="<?php bloginfo('template_url'); ?>/img/icons/flame.svg" width="25px" class="mr-2">
+		<img src="<?php bloginfo('template_url'); ?>/img/icons/flame.svg" width="25" class="mr-2">
 		<div class="text-xl font-bold"><?php _e('Популярное', 'totop'); ?></div>	
 	</div>
 	

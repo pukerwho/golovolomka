@@ -109,14 +109,14 @@
       <div class="header-content flex justify-between items-center">
         <div class="header-logo logo">
           <a href="<?php echo home_url(); ?>" class="flex items-end text-xl font-bold">
-            <img src="<?php bloginfo('template_url'); ?>/img/logo.svg" alt="Логотип" width="28px" class="mr-2">
+            <img src="<?php bloginfo('template_url'); ?>/img/logo.svg" alt="Логотип" width="28" class="mr-2">
             <span class="leading-none">TimeToTop</span>
           </a>
         </div>
         <div class="header-menu__desktop menu hidden lg:block">
           <?php wp_nav_menu([
             'theme_location' => 'head_menu',
-            'menu_id' => 'head_menu',
+            'menu_id' => 'head_menu_pc',
             'menu_class' => 'flex justify-between -mx-1'
           ]); ?>
         </div>
@@ -138,7 +138,7 @@
           $menu_list = '<ul id="menu-' . $menu_name . '" class="flex flex-col mb-10">';
           foreach ( (array) $menu_items as $key => $menu_item ){
             $menu_icon = carbon_get_nav_menu_item_meta( $menu_item->ID, 'crb_menu_icon' ); 
-            $menu_list .= '<li class="flex items-center mb-3"><img src="' . $menu_icon . '" class="mr-2" width="25px"><a href="' . $menu_item->url . '" class="text-xl">' . $menu_item->title . '</a></li>';
+            $menu_list .= '<li class="flex items-center mb-3"><img src="' . $menu_icon . '" class="mr-2" width="25" alt="Icon"><a href="' . $menu_item->url . '" class="text-xl">' . $menu_item->title . '</a></li>';
           }
           $menu_list .= '</ul>';
         }
@@ -149,7 +149,7 @@
         echo $menu_list;
       ?>
       <div class="flex items-center mb-4">
-        <img src="<?php bloginfo('template_url'); ?>/img/icons/categories.svg" width="25px" class="mr-3">
+        <img src="<?php bloginfo('template_url'); ?>/img/icons/categories.svg" width="25" class="mr-3">
         <div class="text-xl font-bold">
           <?php _e('Категории', 'totop'); ?>
         </div>
