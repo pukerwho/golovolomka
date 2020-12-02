@@ -1,6 +1,6 @@
 <div class="post-item bg-white shadow-md rounded-md mb-4">
 	<!-- IMG -->
-	<img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'full'); ?>" alt="<?php the_title(); ?>" class="post-item__img w-full mb-2" loading="lazy" itemprop="image">
+	<img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'full'); ?>" alt="<?php the_title(); ?>" class="post-item__img w-full mb-2" loading="lazy">
 	
 	<div class="p-3 pr-6">
 		<!-- AUTHOR -->
@@ -12,7 +12,7 @@
 				<?php if ($avatar): ?>
 			    <?php echo $avatar; ?>
 			  <?php else: ?>
-			    <img src="<?php bloginfo('template_part'); ?>/img/user.svg">
+			    <img src="<?php bloginfo('template_part'); ?>/img/user.svg" alt="<?php echo get_the_author(); ?>">
 			  <?php endif; ?>
 			</div>	
 			<div class="post-author__info">
@@ -46,7 +46,7 @@
 
 			<!-- COMMENTS -->
 			<div class="post-item__comments flex items-center text-sm">
-				<img src="<?php bloginfo('template_url'); ?>/img/icons/comments.svg" class="mr-2">
+				<img src="<?php bloginfo('template_url'); ?>/img/icons/comments.svg" class="mr-2" alt="Комментарии">
 				<span class="mr-2"><?php _e('Комментариев','totop'); ?>:</span>
 				<span><?php echo get_comments_number(); ?></span>
 			</div>

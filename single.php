@@ -61,7 +61,7 @@
 										<?php if ($avatar): ?>
 									    <?php echo $avatar; ?>
 									  <?php else: ?>
-									    <img src="<?php bloginfo('template_part'); ?>/img/user.svg">
+									    <img src="<?php bloginfo('template_part'); ?>/img/user.svg" alt="Аватар">
 									  <?php endif; ?>
 									</div>	
 									<div class="post-author__info">
@@ -128,7 +128,7 @@
 						if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
 							<a href="<?php the_permalink(); ?>" class="block mb-8 lg:mb-6">
 								<div class="flex items-start lg:items-center">
-									<img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'thumbnail') ?>" alt="<?php the_title(); ?>	" loading="lazy" class="rounded-full object-cover mr-4" width="80" height="80">
+									<img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'thumbnail') ?>" alt="<?php the_title(); ?>	" loading="lazy" class="rounded-full object-cover mr-4" width="80" height="80" alt="<?php the_title(); ?>">
 									<div>
 										<div class="text-xl">
 											<?php the_title(); ?>	

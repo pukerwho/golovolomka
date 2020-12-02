@@ -15,7 +15,7 @@ $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : g
 					<?php if ($avatar): ?>
 				    <?php echo $avatar; ?>
 				  <?php else: ?>
-				    <img src="<?php bloginfo('template_part'); ?>/img/user.svg">
+				    <img src="<?php bloginfo('template_part'); ?>/img/user.svg" alt="<?php echo $curauth->display_name; ?>">
 				  <?php endif; ?>
 				</div>
 				<h1 class="text-2xl mb-1"><?php echo $curauth->display_name; ?></h1>

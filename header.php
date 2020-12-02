@@ -149,7 +149,7 @@
         echo $menu_list;
       ?>
       <div class="flex items-center mb-4">
-        <img src="<?php bloginfo('template_url'); ?>/img/icons/categories.svg" width="25" class="mr-3">
+        <img src="<?php bloginfo('template_url'); ?>/img/icons/categories.svg" width="25" class="mr-3" alt="Icon">
         <div class="text-xl font-bold">
           <?php _e('Категории', 'totop'); ?>
         </div>
@@ -172,4 +172,4 @@
       </ul>
     </div>
   </header>
-  <section id="content" role="main">
+  

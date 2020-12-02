@@ -12,7 +12,7 @@
 				?>
 				<a href="<?php echo get_permalink( $next_post ); ?>" class="flex items-center">
 					<div class="mr-4">
-						<img src="<?php echo get_the_post_thumbnail_url($next_post, 'thumbnail'); ?>" alt="<?php echo esc_html($next_post->post_title); ?>" width="45">
+						<img src="<?php echo get_the_post_thumbnail_url($next_post, 'thumbnail'); ?>" alt="<?php echo esc_html($next_post->post_title); ?>" width="45" alt="Следующая запись">
 					</div>
 					<div class="flex flex-col">
 						<span class="text-sm"><?php _e('Следующая запись', 'totop'); ?></span>
