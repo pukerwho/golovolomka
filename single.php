@@ -128,7 +128,7 @@
 						if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
 							<a href="<?php the_permalink(); ?>" class="block mb-8 lg:mb-6">
 								<div class="flex items-start lg:items-center">
-									<img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'thumbnail') ?>" alt="<?php the_title(); ?>	" loading="lazy" class="rounded-full object-cover mr-4" width="80" height="80" alt="<?php the_title(); ?>">
+									<img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'thumbnail') ?>" alt="<?php the_title(); ?>	" loading="lazy" class="rounded-full object-cover mr-4" width="80" height="80">
 									<div>
 										<div class="text-xl">
 											<?php the_title(); ?>	

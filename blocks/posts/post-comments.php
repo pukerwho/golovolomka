@@ -29,7 +29,7 @@ add_action( 'comment_form', 'output_hidden_field_in_comment_form' );
 				</p>',
 			],
 			'comment_field' => '<p class="comment-form-comment">
-				<textarea id="comment" name="comment" rows="5" placeholder="' . $comment_textarea_text . '" aria-required="true" required="required"></textarea>
+				<textarea id="comment" name="comment" rows="5" placeholder="' . $comment_textarea_text . '" required="required"></textarea>
 			</p>',
 		]); 
 	?>
