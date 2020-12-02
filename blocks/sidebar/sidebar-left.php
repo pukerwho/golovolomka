@@ -1,7 +1,7 @@
 <div class="sidebar sidebar-left">
 	<div>
 		<div class="flex items-center mb-4">
-			<img src="<?php bloginfo('template_url'); ?>/img/icons/categories.svg" width="25px" class="mr-3">
+			<img src="<?php bloginfo('template_url'); ?>/img/icons/categories.svg" width="25" class="mr-3" alt="Icon">
 			<div class="text-xl">
 				<?php _e('Категории', 'totop'); ?>
 			</div>
@@ -24,7 +24,7 @@
 		</ul>
 		<div>
 			<div class="flex items-center mb-4">
-				<img src="<?php bloginfo('template_url'); ?>/img/icons/lists.svg" width="25px" class="mr-3">
+				<img src="<?php bloginfo('template_url'); ?>/img/icons/lists.svg" width="25" class="mr-3" alt="Icon">
 				<div class="text-xl">
 					<?php _e('Хештеги', 'totop'); ?>
 				</div>

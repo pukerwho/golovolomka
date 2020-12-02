@@ -12,9 +12,9 @@
 	<div class="flex items-end mb-2 px-4 py-2 -mt-6">
 		<div class="post-category__icon mr-4">
 			<?php if (carbon_get_term_meta($current_term_id, 'crb_category_icon')): ?>
-				<img src="<?php echo carbon_get_term_meta($current_term_id, 'crb_category_icon'); ?>" width="50px">
+				<img src="<?php echo carbon_get_term_meta($current_term_id, 'crb_category_icon'); ?>" width="50" alt="Icon">
 			<?php else: ?>
-				<img src="<?php bloginfo('template_url'); ?>/img/icons/file.svg" width="50px">
+				<img src="<?php bloginfo('template_url'); ?>/img/icons/file.svg" width="50" alt="Icon">
 			<?php endif; ?>
 		</div>
 		<div class="text-2xl font-bold"><?php echo $current_term_name; ?></div>	

@@ -1,6 +1,6 @@
 <div class="sidebar-block rounded-md shadow-sm mb-6 px-4 pb-2">
 	<div class="sidebar-block__icon">
-		<img src="<?php bloginfo('template_url'); ?>/img/icons/help.svg" width="125px" class="mx-auto">
+		<img src="<?php bloginfo('template_url'); ?>/img/icons/help.svg" width="125" class="mx-auto" alt="Помощь в Телеграме">
 	</div>
 	<div class="text-2xl text-center mb-2"><?php _e('Есть вопросы?', 'totop'); ?></div>
 	<div class="mb-4">
