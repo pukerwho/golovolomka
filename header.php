@@ -59,6 +59,8 @@
   <meta name="description" content='<?php echo $descr; ?>'>
   <meta name="keywords" content='<?php echo $keyW; ?>'>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="yandex-verification" content="ae769d5c6d6ad071" />
+
 
   <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
   <link rel="profile" href="http://gmpg.org/xfn/11">
