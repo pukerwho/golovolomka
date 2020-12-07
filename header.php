@@ -57,20 +57,13 @@
   <title><?php echo $title.' — '.$siteName; ?></title>
   <meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta name="description" content='<?php echo $descr; ?>'>
-  <meta name="keywords" content='<?php echo $keyW; ?>'>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="yandex-verification" content="ae769d5c6d6ad071" />
 
 
   <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
   <link rel="profile" href="http://gmpg.org/xfn/11">
-  <link rel="apple-touch-icon" href="/example.png">
-  <base href="<?php echo home_url(); ?>">
-
-  <!-- Google Plus -->
-  <meta itemprop="name" content='<?php echo $title; ?>'/>
-  <meta itemprop="description" content="<?php echo $descr; ?>"/>
-  <meta itemprop="image" content="<?php echo $img; ?>"/>
+  <link rel="apple-touch-icon" href="<?php bloginfo('template_url'); ?>/img/logo.svg">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary"/>
