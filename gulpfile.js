@@ -42,4 +42,4 @@ exports.scss = scss;
 exports.scripts = scripts;
 exports.inlinecss = inlinecss;
 
-exports.default = series(scss, prefix, minify, scripts);
+exports.default = series(scss, prefix, minify, scripts, inlinecss);
