@@ -134,7 +134,6 @@ html{-webkit-text-size-adjust:100%;font-family:system-ui,-apple-system,BlinkMacS
 
     <!-- Мобильное меню -->
     <div class="menu-cover">
-
       <div class="flex items-center justify-between p-3 pb-0">
         <div>
           <a href="<?php echo home_url(); ?>" class="flex items-end text-xl font-bold">
@@ -192,9 +191,9 @@ html{-webkit-text-size-adjust:100%;font-family:system-ui,-apple-system,BlinkMacS
             foreach($categories as $cat): ?>
               <li class="mb-2">
                 <a href="<?php echo get_category_link( $cat->term_id); ?>" class="flex">
-                  <div class="flex items-center justify-center rounded-md mr-3" style="width: 42px; height: 42px; background-color: <?php echo carbon_get_term_meta($cat->ID, 'crb_category_color'); ?>">
-                    <?php if (carbon_get_term_meta($cat->ID, 'crb_category_icon')): ?>
-                    <img src="<?php echo carbon_get_term_meta($cat->ID, 'crb_category_icon'); ?>" width="25" alt="<?php echo $cat->name; ?>">
+                  <div class="flex items-center justify-center rounded-md mr-3" style="width: 42px; height: 42px; background-color: <?php echo carbon_get_term_meta($cat->term_id, 'crb_category_color'); ?>">
+                    <?php if (carbon_get_term_meta($cat->term_id, 'crb_category_icon')): ?>
+                    <img src="<?php echo carbon_get_term_meta($cat->term_id, 'crb_category_icon'); ?>" width="25" alt="<?php echo $cat->name; ?>">
                   <?php else: ?>
                     <img src="<?php bloginfo('template_url'); ?>/img/icons/file.svg" width="25" alt="<?php echo $cat->name; ?>">
                   <?php endif; ?>
@@ -235,9 +234,9 @@ html{-webkit-text-size-adjust:100%;font-family:system-ui,-apple-system,BlinkMacS
             foreach($tags as $tag): ?>
               <li class="mb-2">
                 <a href="<?php echo get_tag_link( $tag->term_id ); ?>" class="flex">
-                  <div class="flex items-center justify-center rounded-md mr-3" style="width: 42px; height: 42px; background-color: <?php echo carbon_get_term_meta($tag->ID, 'crb_category_color'); ?>">
-                    <?php if (carbon_get_term_meta($tag->ID, 'crb_category_icon')): ?>
-                    <img src="<?php echo carbon_get_term_meta($tag->ID, 'crb_category_icon'); ?>" width="25" alt="<?php echo $tag->name; ?>">
+                  <div class="flex items-center justify-center rounded-md mr-3" style="width: 42px; height: 42px; background-color: <?php echo carbon_get_term_meta($tag->term_id, 'crb_category_color'); ?>">
+                    <?php if (carbon_get_term_meta($tag->term_id, 'crb_category_icon')): ?>
+                    <img src="<?php echo carbon_get_term_meta($tag->term_id, 'crb_category_icon'); ?>" width="25" alt="<?php echo $tag->name; ?>">
                   <?php else: ?>
                     <img src="<?php bloginfo('template_url'); ?>/img/icons/file.svg" width="25" alt="<?php echo $tag->name; ?>">
                   <?php endif; ?>
