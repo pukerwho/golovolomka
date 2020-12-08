@@ -6,13 +6,19 @@ function init() {
 		$('.bg-modal').addClass('open');
 		$('body').addClass('overflow-y-hidden');
 	})
-	document.addEventListener('click', function(e){
-    if(e.target.classList.value === 'bg-modal open') {
-      $('.menu-cover').removeClass('open');
-			$('.bg-modal').removeClass('open');
-			$('body').removeClass('overflow-y-hidden');
-    }
-  });
+	$('.header-menu__mobile--close').on('click', function(){
+		$('.menu-cover').removeClass('open');
+		$('.bg-modal').removeClass('open');
+		$('body').removeClass('overflow-y-hidden');
+		console.log('close');
+	});
+	// document.addEventListener('click', function(e){
+ //    if(e.target.classList.value === 'bg-modal open') {
+ //      $('.menu-cover').removeClass('open');
+	// 		$('.bg-modal').removeClass('open');
+	// 		$('body').removeClass('overflow-y-hidden');
+ //    }
+ //  });
 
    $(function(){
 		 var lastScrollTop = 0, delta = 30;
