@@ -69,6 +69,13 @@ add_action('do_feed_atom_comments', 'itsme_disable_feed', 1);
 remove_action( 'wp_head', 'feed_links_extra', 3 );
 remove_action( 'wp_head', 'feed_links', 2 );
 
+function my_custom_upload_mimes($mimes = array()) {
+  $mimes['svg'] = "image/svg+xml";
+  return $mimes;
+}
+
+add_action('upload_mimes', 'my_custom_upload_mimes');
+
 function my_login_logo() { ?>
   <style type="text/css">
     #login h1 a, .login h1 a {
