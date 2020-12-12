@@ -69,6 +69,8 @@ add_action('do_feed_atom_comments', 'itsme_disable_feed', 1);
 remove_action( 'wp_head', 'feed_links_extra', 3 );
 remove_action( 'wp_head', 'feed_links', 2 );
 
+add_filter( 'wp_sitemaps_enabled', '__return_false' );
+
 function my_custom_upload_mimes($mimes = array()) {
   $mimes['svg'] = "image/svg+xml";
   return $mimes;
