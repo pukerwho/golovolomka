@@ -45,13 +45,13 @@ input[type="submit"] {
 blockquote {
 	border-left: 0.25rem solid var(--main-dark-color);
 	padding-left: 1rem;
-	.wp-block-quote.is-style-large {
+	&.wp-block-quote.is-style-large {
 		border: 1px solid rgba(0,0,0,.08);
 		border-radius: 8px;
 		background: #fff8c4;
 		padding: 1rem 1rem 0rem 1rem;
 		p {
-			font-size: 1.25rem;
+			font-size: 1.15rem;
 			line-height: 1.5;
 			font-style: normal;
 		}
