@@ -253,13 +253,13 @@
 			background: var(--main-dark-color);
 		}
 		&.next {
-			background: url('../img/icons/arrow-right.svg');
+			background: url($url_theme+'/img/icons/arrow-right.svg'); 
 	    background-size: 18px;
 	    background-position: 50%;
 	    background-repeat: no-repeat;
 		}
 		&.prev {
-			background: url('../img/icons/arrow-right.svg');
+			background: url($url_theme+'/img/icons/arrow-right.svg');
 	    background-size: 18px;
 	    background-position: 50%;
 	    background-repeat: no-repeat;
