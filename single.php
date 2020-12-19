@@ -9,10 +9,15 @@
 						<div class="post-navigation__title text-lg font-bold mb-2">
 							<?php _e('Содержание', 'totop'); ?>:
 						</div>
+
 						<ul>
-							<li class="mb-1"><a href="#" class="text-blue-700">1. Раздел первый</a></li>
-							<li class="mb-1"><a href="#">2. Длинный список ключевых слов, которые нужно вместить</a></li>
-							<li class="mb-1"><a href="#">3. Раздел третий</a></li>
+							<?php $post_contents = carbon_get_the_post_meta('crb_post_content');
+							foreach( $post_contents as $key => $post_content ): ?>
+								<?php $key = $key + 1; ?>
+								<li class="mb-1">
+									<a href="#<?php echo $post_content['crb_post_content_link']; ?>"><?php echo $key; ?>. <?php echo $post_content['crb_post_content_title']; ?></a>
+								</li>
+						<?php endforeach; ?>
 						</ul>	
 					</div>
 				</div>

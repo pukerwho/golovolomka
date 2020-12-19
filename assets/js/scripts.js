@@ -21,6 +21,7 @@ function init() {
 	$('.post-navigation--mobile_close').on('click', function(){
 		$('.post-navigation--mobile').removeClass('show');
 	});
+
 	// document.addEventListener('click', function(e){
  //    if(e.target.classList.value === 'bg-modal open') {
  //      $('.menu-cover').removeClass('open');
@@ -29,6 +30,7 @@ function init() {
  //    }
  //  });
 
+ //Появляется bottom-info
  	if ($(window).outerWidth() < 1025) {
 		$(function(){
 			var lastScrollTop = 0, delta = 30;
