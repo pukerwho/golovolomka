@@ -166,7 +166,7 @@
 					</div>
 
 					<!-- Комментарии -->
-					<div class="post-comments mx-2 lg:mx-0 mb-16">
+					<div id="post-comments" class="post-comments mx-2 lg:mx-0 mb-16">
 						<div class="text-3xl mb-6"><?php _e('Обсуждение', 'totop'); ?></div>
 						<?php get_template_part('blocks/posts/post-comments'); ?>
 					</div>
