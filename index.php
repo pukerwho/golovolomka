@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="container mx-auto py-4 px-2 lg:px-0">
+<div class="container mx-auto bg-custom-main rounded-lg py-8 px-2 lg:px-10 mb-6">
 	<div class="flex py-2">
 		<aside class="sidebar sidebar__left hidden lg:block w-2/12">
 			<?php get_template_part('blocks/sidebar/sidebar-left', 'timeto'); ?>
@@ -19,7 +19,8 @@
 			</div>
 		</main>
 		<aside class="sidebar sidebar__right hidden lg:block w-3/12">
-			<?php get_template_part('blocks/sidebar/sidebar-right', 'timeto'); ?>
+			<?php get_template_part('blocks/posts/posts-popular', 'timeto'); ?>
+			<?php get_template_part('blocks/sidebar/sidebar-telegram', 'timeto'); ?>
 		</aside>	
 	</div>
 </div>

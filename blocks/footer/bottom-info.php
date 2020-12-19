@@ -1,26 +1,26 @@
-<div class="bottom-info bg-white shadow-lg">
+<div class="bottom-info w-3/4">
 	<div class="container mx-auto">
-		<div class="flex justify-center lg:justify-between py-3">
-			<div class="flex flex-col lg:flex-row items-center">
-				<span class="text-xl mb-2 mr-0 lg:mb-0 lg:mr-4 "><?php _e('Поделиться в', 'totop'); ?>:</span>
-				<?php do_action('show_social_share_buttons'); ?>	
-			</div>
-			<div class="hidden lg:block">
-				<?php 
-					$next_post = get_previous_post(); 
-					if( ! empty($next_post) ){
-				?>
-				<a href="<?php echo get_permalink( $next_post ); ?>" class="flex items-center">
-					<div class="mr-4">
-						<img src="<?php echo get_the_post_thumbnail_url($next_post, 'thumbnail'); ?>" alt="<?php echo esc_html($next_post->post_title); ?>" width="45">
-					</div>
-					<div class="flex flex-col">
-						<span class="text-sm"><?php _e('Следующая запись', 'totop'); ?></span>
-						<span><?php echo esc_html(wp_trim_words(($next_post->post_title), 5)); ?></span>
-					</div>
-				</a>
-				<?php } ?>
+		<div class="bottom-info--wrap bg-custom-black rounded-md shadow-xl cursor-pointer py-3">
+			<div class="flex items-center justify-center text-center text-lg text-custom-yellow">
+				<span class="mr-3"><?php _e('Содержание', 'totop'); ?></span>
+				<span><svg enable-background="new 0 0 512 512" height="15" viewBox="0 0 512 512" width="15" xmlns="http://www.w3.org/2000/svg"><path fill="#fff" d="m464.883 64.267h-417.766c-25.98 0-47.117 21.136-47.117 47.149 0 25.98 21.137 47.117 47.117 47.117h417.766c25.98 0 47.117-21.137 47.117-47.117 0-26.013-21.137-47.149-47.117-47.149z"/><path fill="#fff" d="m464.883 208.867h-417.766c-25.98 0-47.117 21.136-47.117 47.149 0 25.98 21.137 47.117 47.117 47.117h417.766c25.98 0 47.117-21.137 47.117-47.117 0-26.013-21.137-47.149-47.117-47.149z"/><path fill="#fff" d="m464.883 353.467h-417.766c-25.98 0-47.117 21.137-47.117 47.149 0 25.98 21.137 47.117 47.117 47.117h417.766c25.98 0 47.117-21.137 47.117-47.117 0-26.012-21.137-47.149-47.117-47.149z"/></svg></span>
 			</div>
 		</div>
+	</div>
+</div>
+
+<div class="post-navigation--mobile rounded-md">
+	<div class="py-8 px-4">
+		<div class="post-navigation__title text-lg font-bold mb-2">
+			<?php _e('Содержание', 'totop'); ?>:
+		</div>
+		<ul>
+			<li class="mb-1"><a href="#" class="text-blue-700">1. Раздел первый</a></li>
+			<li class="mb-1"><a href="#">2. Длинный список ключевых слов, которые нужно вместить</a></li>
+			<li class="mb-1"><a href="#">3. Раздел третий</a></li>
+		</ul>	
+	</div>
+	<div class="post-navigation--mobile_close text-center text-gray-900 border-top border-solid border-2 cursor-pointer py-4">
+		<?php _e('Закрыть', 'totop'); ?>
 	</div>
 </div>

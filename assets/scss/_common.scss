@@ -1,6 +1,7 @@
 body {
-	background: var(--main-bg-color);
-	font-family: ProximaNova;
+	background: var(--dark-dark-color);
+	font-family: 'IBM Plex Sans', sans-serif;
+	font-weight: 300;
 }
 
 h2 {
@@ -13,11 +14,15 @@ p {
 	color: var(--main-dark-color);
 	font-size: 1.15rem;
 	line-height: 1.5;
-	margin-bottom: 1.5rem;
+	margin-bottom: 2.25rem;
 }
 
 li {
 	list-style-type: none;
+}
+
+hr {
+	border-top-color: #e6e6e6	
 }
 
 mark {
@@ -28,9 +33,10 @@ mark {
 
 input, textarea {
 	width: 100%;
+	color: #333;
 	background: var(--white-color);
 	border: 1px solid var(--border-color);
-	border-radius: 0.5rem;
+	border-radius: 0.25rem;
 	padding: 0.75rem 1rem;
 }
 
@@ -70,7 +76,7 @@ article {
 	}
 	ul, ol {
 		margin-left: 0rem;
-		margin-bottom: 1.5rem;
+		margin-bottom: 2.25rem;
 	}
 	ol[start] {
 		margin-left: 1.75rem;
@@ -126,6 +132,20 @@ article {
 	color: var(--link-color);
 }
 
+.text-custom-yellow {
+	color: var(--custom-yellow);
+}
+.text-custom-green {
+	color: var(--custom-green);
+}
+
+.bg-custom-black {
+	background: var(--dark-dark-color);
+}
+
+.bg-custom-main {
+	background: var(--main-bg-color);
+}
 .bg-custom-blue {
 	background: var(--blue-color);
 }

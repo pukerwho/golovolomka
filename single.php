@@ -1,14 +1,24 @@
 <?php get_header(); ?>
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-	<div class="post py-4">
+	<div class="post pb-4">
 		<div class="container mx-auto px-2 lg:px-0">
-			<div class="flex flex-col lg:flex-row">
-				<main class="w-full lg:w-9/12 mx-0 lg:mx-4">
-					<article itemscope itemtype="http://schema.org/Article" class="bg-white shadow-md rounded-md mb-6">
-						<!-- Заглавное фото -->
-						<img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'large') ?>" alt="<?php the_title(); ?>" loading="lazy" itemprop="image" class="w-full post-thumb object-cover">
-						<div class="px-6 lg:px-16 py-5 lg:py-8">
+			<div class="flex flex-col lg:flex-row bg-white shadow-md rounded-md">
+				<div class="post-navigation hidden lg:block w-3/12 py-8 px-10">
+					<div class="sticky" style="top: 1rem;">
+						<div class="post-navigation__title text-lg font-bold mb-2">
+							<?php _e('Содержание', 'totop'); ?>:
+						</div>
+						<ul>
+							<li class="mb-1"><a href="#" class="text-blue-700">1. Раздел первый</a></li>
+							<li class="mb-1"><a href="#">2. Длинный список ключевых слов, которые нужно вместить</a></li>
+							<li class="mb-1"><a href="#">3. Раздел третий</a></li>
+						</ul>	
+					</div>
+				</div>
+				<main class="w-full lg:w-6/12 mx-0 lg:mx-4">
+					<article itemscope itemtype="http://schema.org/Article" class="mb-6">
+						<div class="px-2 lg:px-4 py-5">
 							<!-- Хлебные крошки -->
 							<div class="mb-5">
 							<?php 
@@ -97,17 +107,26 @@
 								</div>
 							</div>
 
+							<!-- Заглавное фото -->
+							<img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'large') ?>" alt="<?php the_title(); ?>" loading="lazy" itemprop="image" class="w-full post-thumb object-cover mb-6">
+
 							<!-- Основной контент -->
 							<div itemprop="articleBody">
 								<?php the_content(); ?>	
 							</div>
-						</div>
-						
+
+						</div>						
 					</article>
+					<hr>
+					<div class="block lg:hidden mb-4 py-8 px-2">
+						<?php get_template_part('blocks/posts/post-statistics'); ?>
+						<div class="text-lg font-bold mb-2"><?php _e('Поделиться', 'totop'); ?></div>
+						<?php do_action('show_social_share_buttons'); ?>		
+					</div>
 
 					<!-- Похожие записи -->
-					<div class="post-related shadow-md rounded-md px-6 lg:px-10 py-5 mb-6">
-						<div class="text-3xl mb-6"><?php _e('Похожие записи', 'totop'); ?></div>
+					<div class="post-related rounded-md mx-2 lg:mx-0 mb-6">
+						<div class="text-xl text-gray-800 pt-6 uppercase px-6"><?php _e('Что еще почитать?', 'totop'); ?></div>
 						<div>
 							<?php 
 							$current_id = get_the_ID();
@@ -126,11 +145,10 @@
 							),
 						) );
 						if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
-							<a href="<?php the_permalink(); ?>" class="block mb-8 lg:mb-6">
+							<a href="<?php the_permalink(); ?>" class="post-related__link block px-6 py-4">
 								<div class="flex items-start lg:items-center">
-									<img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'thumbnail') ?>" alt="<?php the_title(); ?>	" loading="lazy" class="rounded-full object-cover mr-4" width="80" height="80">
 									<div>
-										<div class="text-xl">
+										<div class="text-lg font-bold">
 											<?php the_title(); ?>	
 										</div>
 										<div class="post-author__name text-sm">
@@ -144,14 +162,16 @@
 					</div>
 
 					<!-- Комментарии -->
-					<div class="post-comments shadow-md rounded-md px-6 lg:px-10 py-5 mb-6">
+					<div class="post-comments mx-2 lg:mx-0 mb-16">
 						<div class="text-3xl mb-6"><?php _e('Обсуждение', 'totop'); ?></div>
 						<?php get_template_part('blocks/posts/post-comments'); ?>
 					</div>
 				</main>
 				
-				<aside class="w-full lg:w-3/12 sidebar sidebar-right">
-					<?php get_template_part('blocks/sidebar/sidebar-post', 'totop'); ?>
+				<aside class="hidden lg:block w-full lg:w-3/12 py-8 px-10 sidebar sidebar-right">
+					<div class="sticky" style="top: 1rem;">
+						<?php get_template_part('blocks/sidebar/sidebar-right', 'totop'); ?>
+					</div>
 				</aside>
 
 			</div>

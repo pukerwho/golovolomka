@@ -1,10 +1,10 @@
-	<footer id="footer" class="footer py-20">
+	<footer id="footer" class="footer text-white py-10">
   	<div class="container mx-auto px-2 lg:px-0">
   		<div class="flex flex-col lg:flex-row">
 
   			<div class="w-full lg:w-2/5 px-2 mb-4 lg:mb-0">
-    			<div class="text-xl font-bold mb-2">TimeToTop</div>
-    			<div class="mb-4"><?php _e('Разбираемся в сайтах. Делаем жизнь вебмастера проще. Любим печеньки.', 'totop'); ?></div>
+    			<div class="text-xl text-custom-green font-bold mb-2">TimeToTop</div>
+    			<div class="mb-4"><?php _e('Разбираемся в сайтах. Делаем жизнь вебмастера проще.', 'totop'); ?></div>
   				<div class="footer-social social mb-4">
   					<ul class="flex items-center">
   						<li><a href="https://www.facebook.com/time2top" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/icons/facebook.svg" width="22" alt="Facebook"></a></li>
@@ -13,7 +13,7 @@
   					</ul>
   				</div>
   				<div>
-  					<?php _e('Сделано с любовью и на ', 'restx'); ?> <a href="https://wordpress.org/" target="_blank" class="font-bold underline">Wordpress</a>
+  					<?php _e('Сделано с любовью и на ', 'restx'); ?> <a href="https://wordpress.org/" target="_blank" class="font-bold text-custom-yellow underline">Wordpress</a>
   				</div>
     		</div>
 
@@ -45,7 +45,7 @@
     		<div class="w-full lg:w-1/5 px-2 mb-4 lg:mb-0">
     			<div>
     				<ul>
-    					<li><a href="/contacts" class="font-bold"><?php _e('Написать нам', 'totop'); ?></a></li>
+    					<li><a href="/contacts" class="font-bold text-custom-yellow"><?php _e('Написать нам', 'totop'); ?></a></li>
     				</ul>
     			</div>
     		</div>

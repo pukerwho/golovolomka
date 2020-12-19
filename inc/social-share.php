@@ -26,13 +26,13 @@ function crunchify_social_sharing_buttons($content) {
     // Add sharing button at the end of page/page content
     
     $content .= '<div class="sidebar-social flex">';
-    $content .= '<li class="share-item"><a class="share-link share-facebook" href="'.$facebookURL.'" target="_blank"><span class="mr-2">Фейсбуке</span><img src="'. get_template_directory_uri() .'/img/icons/facebook-share.svg" class="share-icon"  alt="Поделиться в Facebook"></a></li>';
+    $content .= '<li class="share-item"><a class="share-link share-facebook" href="'.$facebookURL.'" target="_blank"><img src="'. get_template_directory_uri() .'/img/icons/facebook-share.svg" class="share-icon"  alt="Поделиться в Facebook"></a></li>';
 
-    $content .= '<li class="share-item"><a class="share-link share-twitter" href="'.$twitterURL.'" target="_blank"><span class="mr-2">Твиттере</span><img src="'. get_template_directory_uri() .'/img/icons/twitter-share.svg" class="share-icon" alt="Поделиться в Twitter"></a></li>';
+    $content .= '<li class="share-item"><a class="share-link share-twitter" href="'.$twitterURL.'" target="_blank"><img src="'. get_template_directory_uri() .'/img/icons/twitter-share.svg" class="share-icon" alt="Поделиться в Twitter"></a></li>';
     
-    $content .= '<li class="share-item"><a class="share-link share-telegram" href="'.$telegramURL.'" target="_blank"><span class="mr-2">Телеграме</span><img src="'. get_template_directory_uri() .'/img/icons/telegram-share.svg" class="share-icon" alt="Поделиться в Телеграме"></a></li>';
+    $content .= '<li class="share-item"><a class="share-link share-telegram" href="'.$telegramURL.'" target="_blank"><img src="'. get_template_directory_uri() .'/img/icons/telegram-share.svg" class="share-icon" alt="Поделиться в Телеграме"></a></li>';
     
-    $content .= '<li class="share-item"><a class="share-link share-viber" href="'.$viberURL.'" target="_blank"><span class="mr-2">Вайбере</span><img src="'. get_template_directory_uri() .'/img/icons/viber-share.svg" class="share-icon" alt="Поделиться в Viber"></a></li>';
+    $content .= '<li class="share-item"><a class="share-link share-viber" href="'.$viberURL.'" target="_blank"><img src="'. get_template_directory_uri() .'/img/icons/viber-share.svg" class="share-icon" alt="Поделиться в Viber"></a></li>';
     $content .= '</div>';
     echo $content;
   }else{

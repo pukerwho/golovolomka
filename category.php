@@ -14,13 +14,9 @@
 			<div class="text-3xl text-left lg:text-center font-bold mt-10 mb-5">
 				<?php single_cat_title(); ?>
 			</div>
-			<div class="text-xl text-left lg:text-center mx-auto">
+			<div class="text-xl text-left lg:text-center mx-auto mb-10">
 				<?php echo carbon_get_term_meta(get_queried_object_id(), 'crb_category_description'); ?>
 			</div>
-		</div>
-	</div>
-	<div class="container mx-auto px-2 lg:px-0 mb-10">
-		<div class="w-full lg:w-9/12 mx-auto">
 			<div>
 				<?php 
 				$current_term = get_queried_object_id();
@@ -46,7 +42,7 @@
 						<div class="flex items-start lg:items-center">
 							<img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'thumbnail') ?>" alt="<?php the_title(); ?>	" loading="lazy" class="rounded-full object-cover mr-4" width="80" height="80">
 							<div>
-								<div class="text-xl">
+								<div class="text-xl font-bold">
 									<?php the_title(); ?>	
 								</div>
 								<div class="post-author__name text-sm">

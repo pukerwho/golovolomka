@@ -4,10 +4,10 @@
 $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author));
 ?>
 
-<div class="container mx-auto px-2 lg:px-0 py-5">
+<div class="container mx-auto bg-custom-main rounded-lg py-8 px-2 lg:px-10 mb-6">
 	<div class="flex w-full lg:w-4/5 flex-col lg:flex-row mx-auto">
 		<div class="w-full lg:w-1/3 mr-6">
-			<div class="author-info bg-custom-gray flex items-center flex-col rounded-md border-custom-gray shadow-sm py-4 mb-6 lg:mb-0">
+			<div class="author-info flex items-center flex-col py-4 mb-6 lg:mb-0">
 				<div class="author-avatar mb-4">
 					<?php 
 						$avatar = get_avatar(get_the_author_meta('ID'));

@@ -11,12 +11,12 @@
 				background: transparent;
 				border-radius: 0.75rem;
 				&:hover {
-					background: var(--light-bg-color);
+					color: #dcad76;
 				}
 			}
 			.current_page_item {
 				a {
-					background: var(--light-bg-color);
+					color: #dcad76;
 				}
 			}
 			.menu-item-has-children {
@@ -83,7 +83,11 @@
 		    }
 		    a {
 		    	display: block;
+		    	color: #333;
 		    	white-space: nowrap;
+		    	&:hover {
+		    		color: #dcad76;
+		    	}
 		    }
 			}
 		}
@@ -96,7 +100,7 @@
 				height: 2px;
 				position: absolute;
 				top: 50%; right: 0;
-				background: var(--main-dark-color);
+				background: #fff;
 				-webkit-transform: translateY(-1px);
 				-ms-transform: translateY(-1px);
 				transform: translateY(-1px);
@@ -290,38 +294,35 @@
 
 .bottom {
 	&-info {
-		width: 100%;
 		position: fixed;
-		bottom: 0;
-		color: #ffffff;
-		background: rgba(46,45,45,0.85);
-		-webkit-box-shadow: 0 0 15px rgba(0,0,0,0.15);
-		box-shadow: 0 0 15px rgba(0,0,0,0.15);
-		-webkit-transform: translateY(100%);
-		-ms-transform: translateY(100%);
-		transform: translateY(100%);
-		-webkit-transition: -webkit-transform 0.25s;
-		transition: -webkit-transform 0.25s;
-		-o-transition: transform 0.25s;
-		transition: transform 0.25s;
-		transition: transform 0.25s, -webkit-transform 0.25s;
+		bottom: 1.5rem; left: 50%;
+		opacity: 0;
+		z-index: -1;
+		transform: translateX(-50%);
+		transition: opacity 0.35s;
 		&.show {
-			-webkit-transform: translateY(0);
-			-ms-transform: translateY(0);
-			transform: translateY(0);
+			opacity: 1;
+			z-index: 10;
 		}
 	}
 }
 
 footer {
-	background: #d2d6db;
+	/*background: #d2d6db;*/
+	a {
+		&:hover {
+			color: var(--custom-yellow);
+		}
+	}
 }
 
 .share {
 	&-item {
-		margin-right: 1rem;
+		margin-right: 0.5rem;
 	}
 	&-link {
+		width: 40px;
+		height: 40px;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -334,7 +335,6 @@ footer {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-    background: var(--dark-dark-color);
     border-radius: 0.25rem;
     padding: 0.25rem 0.5rem;
     @include for-phone {
@@ -354,46 +354,26 @@ footer {
 		}
 	}
 	&-facebook {
-		&:hover {
-			background: #3f51b5;
-		}
-		&:focus {
-			background: #3f51b5;
-		}
+		background: #3f51b5;
 		.share-icon {
 			width: 10px;
 		}
 	}
 	&-twitter {
-		&:hover {
-			background: #39a9f4;
-		}
-		&:focus {
-			background: #39a9f4;
-		}
+		background: #39a9f4;
 		.share-icon {
 			width: 16px;
 		}
 	}
 	&-telegram {
-		&:hover {
-			background: #4a90e2;
-		}
-		&:focus {
-			background: #4a90e2;
-		}
+		background: #4a90e2;
 		.share-icon {
 			width: 16px;
 			margin-left: -2px;
 		}
 	}
 	&-viber {
-		&:hover {
-			background: #665cac;
-		}
-		&:focus {
-			background: #665cac;
-		}
+		background: #665cac;
 	}
 }
 

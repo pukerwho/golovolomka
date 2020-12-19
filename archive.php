@@ -2,7 +2,7 @@
 
 <div class="category">
 	<div class="category-color w-full h-32" style="background: <?php echo carbon_get_term_meta(get_queried_object_id(), 'crb_category_color'); ?>"></div>
-	<div class="container mx-auto px-2 lg:px-0">
+	<div class="container mx-auto bg-custom-main rounded-lg py-8 px-2 lg:px-10 mb-6">
 		<div class="w-full lg:w-9/12 category-hero bg-white shadow-md rounded-md px-4 lg:px-10 py-8 -mt-16 mb-10 mx-auto">
 			<div>
 				<?php if (carbon_get_term_meta(get_queried_object_id(), 'crb_category_icon')): ?>

@@ -38,9 +38,10 @@ add_action( 'comment_form', 'output_hidden_field_in_comment_form' );
 
 <?php 
 	function custom_comment_template($comment, $args, $depth) { ?>
-		<div <?php comment_class('mb-5'); ?>>
-			<div id="comment-<?php echo get_comment_ID(); ?>" class="bg-white shadow-md rounded-md px-6 py-4">
-				<div class="post-comment__content mb-2">
+		<hr>
+		<div <?php comment_class('mb-5 pt-5'); ?>>
+			<div id="comment-<?php echo get_comment_ID(); ?>">
+				<div class="post-comment__content mb-1">
 					<div class="post-comment__name font-bold mb-2"><?php echo get_comment_author(); ?></div>
 					<div class="post-comment__text"><?php comment_text(); ?></div>
 				</div>
