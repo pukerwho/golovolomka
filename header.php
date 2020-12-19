@@ -135,7 +135,7 @@ html{-webkit-text-size-adjust:100%;font-family:system-ui,-apple-system,BlinkMacS
     </div>
 
     <!-- Мобильное меню -->
-    <div class="menu-cover">
+    <div class="menu-cover text-black">
       <div class="flex items-center justify-between p-3 pb-0">
         <div>
           <a href="<?php echo home_url(); ?>" class="flex items-end text-xl font-bold">
@@ -161,7 +161,7 @@ html{-webkit-text-size-adjust:100%;font-family:system-ui,-apple-system,BlinkMacS
             $menu_list = '<ul id="menu-' . $menu_name . '" class="flex flex-col bg-custom-gray rounded-md p-3">';
             foreach ( (array) $menu_items as $key => $menu_item ){
               $menu_icon = carbon_get_nav_menu_item_meta( $menu_item->ID, 'crb_menu_icon' ); 
-              $menu_list .= '<li class="flex items-center mb-3"><img src="' . $menu_icon . '" class="mr-2" width="25" alt="Icon"><a href="' . $menu_item->url . '" class="text-lg">' . $menu_item->title . '</a></li>';
+              $menu_list .= '<li class="flex items-center mb-3"><img src="' . $menu_icon . '" class="mr-2" width="25" alt="Icon"><a href="' . $menu_item->url . '" class="text-black text-lg">' . $menu_item->title . '</a></li>';
             }
             $menu_list .= '</ul>';
           }
@@ -178,7 +178,7 @@ html{-webkit-text-size-adjust:100%;font-family:system-ui,-apple-system,BlinkMacS
         <div class="bg-custom-gray rounded-md p-3">
           <div class="flex items-center mb-4">
             <img src="<?php bloginfo('template_url'); ?>/img/icons/categories.svg" width="25" class="mr-3" alt="Icon">
-            <div class="text-xl font-bold">
+            <div class="text-xl text-black font-bold">
               <?php _e('Категории', 'totop'); ?>
             </div>  
           </div>
@@ -201,7 +201,7 @@ html{-webkit-text-size-adjust:100%;font-family:system-ui,-apple-system,BlinkMacS
                   <?php endif; ?>
                   </div>
                   <div>
-                    <div class="font-bold"><?php echo $cat->name; ?></div>
+                    <div class="text-black font-bold"><?php echo $cat->name; ?></div>
                     <div class="text-sm text-gray-600">Записей: <?php echo $cat->count; ?></div>
                   </div>
                 </a>  
