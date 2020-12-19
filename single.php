@@ -9,7 +9,6 @@
 						<div class="post-navigation__title text-lg font-bold mb-2">
 							<?php _e('Содержание', 'totop'); ?>:
 						</div>
-
 						<ul>
 							<?php $post_contents = carbon_get_the_post_meta('crb_post_content');
 							foreach( $post_contents as $key => $post_content ): ?>
@@ -17,7 +16,7 @@
 								<li class="mb-1">
 									<a href="#<?php echo $post_content['crb_post_content_link']; ?>"><?php echo $key; ?>. <?php echo $post_content['crb_post_content_title']; ?></a>
 								</li>
-						<?php endforeach; ?>
+							<?php endforeach; ?>
 						</ul>	
 					</div>
 				</div>
