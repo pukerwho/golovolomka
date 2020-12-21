@@ -56,9 +56,9 @@
 <head>
   <title><?php echo $title.' — '.$siteName; ?></title>
   <meta charset="<?php bloginfo( 'charset' ); ?>">
-  <meta name="referrer" content="origin">
-  <meta name="description" content='<?php echo $descr; ?>'>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" content='<?php echo $descr; ?>'>
   <meta name="yandex-verification" content="ae769d5c6d6ad071" />
 
 
