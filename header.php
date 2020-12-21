@@ -1,55 +1,3 @@
-<?php
-  $siteName = 'TimeToTop';
-  $title = wp_get_document_title();
-  $descr = get_bloginfo('description');
-  $keyW = 'создание, продвижение, реклама';
-  $img = $_SERVER['HTTP_HOST'].'/img/soc_img.jpg';
-  $url = $_SERVER['REQUEST_URI'];
-?>
-
-<?php if(is_single() || is_page()) {
-  //ДЛЯ ПОСТОВ
-  if (have_posts()) : while (have_posts()) : the_post();
-    $seoMetaTitle = carbon_get_the_post_meta('crb_post_seo_title');
-    if ($seoMetaTitle != '') { $title = $seoMetaTitle; } else { $title = get_the_title($post->ID); }
-
-    $seoMetaDescr = carbon_get_the_post_meta('crb_post_seo_description');
-    if ($seoMetaDescr != '') { $descr = $seoMetaDescr; } else { $descr = get_the_excerpt($post->ID); }
-
-    $seoMetakeyw = carbon_get_the_post_meta('crb_post_seo_keywords');
-    if ($seoMetakeyw != '') { $keyW = $seoMetakeyw; }
-
-    $img = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
-    $url = get_the_permalink($post->ID);
-    endwhile; endif;
-
-  } elseif (is_category()) {
-    // ДЛЯ КАТЕГОРИЙ
-    $seoMetaTitle = carbon_get_term_meta(get_queried_object_id(),'crb_category_seo_title');
-    if ($seoMetaTitle != '') { $title = $seoMetaTitle; };
-
-    $seoMetaDescr = carbon_get_term_meta(get_queried_object_id(),'crb_category_seo_description');
-    if ($seoMetaDescr != '') { $descr = $seoMetaDescr; };
-
-    $seoMetakeyw = carbon_get_term_meta(get_queried_object_id(),'crb_category_seo_keywords');
-    if ($seoMetakeyw != '') { $keyW = $seoMetakeyw; };
-
-  } elseif (is_home()) {
-    $title = 'Сайт для вебмастеров: как создавать, продвигать и рекламировать сайты';
-    $descr = 'Этот ресурс будет полезен для верстальщиков, для дизайнеров, для сеошников. Блоги для вебмастеров - множество полезной и ценной информации. Заходите!';
-
-  } elseif (is_search()) {
-    $title = 'Поиск по запросу "'.$s.'"';
-  
-  } elseif (is_404()) {
-    $title = '404 - Страница не найдена';
-
-  } elseif (is_archive()) {
-    $cat_obj = $wp_query->get_queried_object();
-    $name = $cat_obj->name;
-  } 
-?>
-
 <!doctype html>
 <html <?php language_attributes(); ?>>
 
@@ -66,20 +14,6 @@
   <link rel="profile" href="http://gmpg.org/xfn/11">
   <link rel="apple-touch-icon" href="<?php bloginfo('template_url'); ?>/img/logo.svg">
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary"/>
-  <meta name="twitter:title" content='<?php echo $title; ?>'>
-  <meta name="twitter:description" content="<?php echo $descr; ?>"/>
-  <meta name="twitter:image:src" content="<?php echo $img; ?>"/>
-  <meta name="twitter:domain" content="<?php echo $url; ?>"/>
-
-  <!-- Facebook -->
-  <meta property="og:type" content="website"/>
-  <meta property="og:title" content='<?php echo $title; ?>'/>
-  <meta property="og:description" content="<?php echo $descr; ?>"/>
-  <meta property="og:url" content="<?php echo $url; ?>"/>
-  <meta property="og:image" content="<?php echo $img; ?>"/>
-  <meta property="og:site_name" content='<?php echo $siteName; ?>'/>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;500;700&display=swap" crossorigin>
   <style>/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
