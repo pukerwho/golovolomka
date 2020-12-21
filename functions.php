@@ -34,6 +34,7 @@ require_once get_template_directory() . '/inc/custom-fields/category-meta.php';
 require_once get_template_directory() . '/inc/custom-fields/menu-meta.php';
 require_once get_template_directory() . '/inc/shortcodes.php';
 require_once get_template_directory() . '/inc/social-share.php';
+require_once get_template_directory() . '/inc/rating.php';
 require_once get_template_directory() . '/inc/TGM/example.php';
 
 register_nav_menus( array(
@@ -45,7 +46,13 @@ add_action( 'wp_enqueue_scripts', 'theme_name_scripts' );
 function theme_name_scripts() {
     wp_enqueue_script( 'jquery' );
     wp_enqueue_script( 'jquery-ui-core' );
-    wp_enqueue_script( 'scripts', get_template_directory_uri() . '/js/all.js', '','',true);
+    wp_register_script( 'scripts', get_template_directory_uri() . '/js/all.js', '','',true);
+    wp_localize_script( 'scripts', 'rating_params', array(
+      'ajaxurl' => site_url() . '/wp-admin/admin-ajax.php', // WordPress AJAX
+      'postId' => get_queried_object_id(),
+      'postRatingCount' => carbon_get_the_post_meta('crb_post_rating_qty'),
+    ) );
+    wp_enqueue_script( 'scripts' );
 };
 
 // подключаем стили к админке

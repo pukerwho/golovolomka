@@ -47,6 +47,41 @@ function init() {
 			});
 		});
 	}
+
+	//Rating Post
+  var goPostRating = 0;
+  //Post Rating click
+  $(document).on('click', '.post-rating__qty', function(){
+    if (goPostRating === 0){
+      
+      var postId = $('.post_id').val();
+      var postRatingCount = $('.post-rating__count').val();
+      console.log(postRatingCount);
+
+      var button = $(this),
+        data = {
+          'action': 'rating_post_back',
+          'postId': postId,
+          'postRatingCount': postRatingCount,
+        };
+
+      $.ajax({
+        url: rating_params.ajaxurl, // AJAX handler
+        data: data,
+        type: 'POST',
+        beforeSend : function ( xhr ) {
+          console.log('отправляю');
+        },
+        success : function( data ){
+          goPostRating = 1;
+          $('.rating-success-message>div').addClass('show');
+          setTimeout(function(){
+          	$('.rating-success-message>div').removeClass('show');
+          }, 5000)
+        }
+      });
+    }
+  });
 }
 
 document.addEventListener("DOMContentLoaded", init);

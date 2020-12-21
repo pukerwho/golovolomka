@@ -53,6 +53,9 @@
   	</div>
   </footer>
   <?php if(is_single()): ?>
+    <div class="rating-success-message">
+      <div class="inline-block shadow-lg text-custom-yellow rounded-md text-lg py-4 px-10"><?php _e('Спасибо за вашу оценку!', 'totop'); ?></div>
+    </div> 
     <?php get_template_part('blocks/footer/bottom-info', 'totop'); ?>
   <?php endif; ?>
   <div class="bg-modal"></div>
