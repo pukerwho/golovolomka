@@ -8,6 +8,8 @@ function customThemeSupport() {
     add_theme_support( 'post-thumbnails' );
     // let wordpress manage the title
     add_theme_support( 'title-tag' );
+    add_theme_support( 'caption' );
+    add_theme_support( 'gallery' );
     add_theme_support( 'html5', array(  'script', 'style' ) );
     //add_theme_support( 'custom-background', $args );
     //add_theme_support( 'custom-header', $args );
@@ -206,5 +208,3 @@ add_filter( 'comment_post_redirect', function( $location, $comment ) {
     return $location;
   }
 }, 10, 2 );
-
-?>
