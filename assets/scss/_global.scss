@@ -332,7 +332,7 @@ footer {
 	text-align: center;
 	opacity: 0;
 	visibility: hidden;
-	div	{
+	&>div	{
 		background-color: #222222;
 		-webkit-transform: translateY(100%) rotate(2deg);
 		-ms-transform: translateY(100%) rotate(2deg);
@@ -344,12 +344,14 @@ footer {
 	&.show {
 		visibility: visible;
 		opacity: 1;
-		-webkit-transform: translateY(0) rotate(0);
-		-ms-transform: translateY(0) rotate(0);
-		transform: translateY(0) rotate(0);
-		-webkit-transition: all 0.25s;
-		-o-transition: all 0.25s;
-		transition: all 0.25s;
+		&>div {
+			-webkit-transform: translateY(0) rotate(0);
+			-ms-transform: translateY(0) rotate(0);
+			transform: translateY(0) rotate(0);
+			-webkit-transition: all 0.25s;
+			-o-transition: all 0.25s;
+			transition: all 0.25s;
+		}
 	}	
 }
 

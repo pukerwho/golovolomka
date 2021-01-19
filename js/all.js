@@ -77,9 +77,9 @@ function init() {
         },
         success : function( data ){
           goPostRating = 1;
-          $('.rating-success-message>div').addClass('show');
+          $('.rating-success-message').addClass('show');
           setTimeout(function(){
-          	$('.rating-success-message>div').removeClass('show');
+          	$('.rating-success-message').removeClass('show');
           }, 5000)
         }
       });
