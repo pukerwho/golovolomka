@@ -2,7 +2,7 @@
 
 <div class="category">
 	<div class="category-color w-full h-32" style="background: <?php echo carbon_get_term_meta(get_queried_object_id(), 'crb_category_color'); ?>"></div>
-	<div class="container mx-auto bg-custom-main rounded-lg py-8 px-2 lg:px-10 mb-6">
+	<div class="container mx-auto px-2 lg:px-0">
 		<div class="w-full lg:w-9/12 category-hero bg-white shadow-md rounded-md px-4 lg:px-10 py-8 -mt-16 mb-10 mx-auto">
 			<div>
 				<?php if (carbon_get_term_meta(get_queried_object_id(), 'crb_category_icon')): ?>
@@ -14,13 +14,9 @@
 			<div class="text-3xl text-left lg:text-center font-bold mt-10 mb-5">
 				<?php single_cat_title(); ?>
 			</div>
-			<div class="text-xl text-left lg:text-center mx-auto">
+			<div class="text-xl text-left lg:text-center mx-auto mb-10">
 				<?php echo carbon_get_term_meta(get_queried_object_id(), 'crb_category_description'); ?>
 			</div>
-		</div>
-	</div>
-	<div class="container mx-auto px-2 lg:px-0 mb-10">
-		<div class="w-full lg:w-9/12 mx-auto">
 			<div>
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 					<a href="<?php the_permalink(); ?>" class="block mb-10 lg:mb-6">

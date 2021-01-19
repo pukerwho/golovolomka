@@ -63,7 +63,6 @@ function load_admin_styles() {
   wp_enqueue_style( 'admin-style', get_template_directory_uri() . '/css/admin-style.css', false, '1.0.0' );
 }
 
-remove_action( 'wp_head', '_wp_render_title_tag', 1 );
 remove_action('wp_head', 'print_emoji_detection_script', 7);
 remove_action ('wp_head', 'rsd_link');
 remove_action('wp_head', 'wp_generator');
