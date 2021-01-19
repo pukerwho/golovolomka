@@ -86,22 +86,6 @@ add_action('do_feed_atom_comments', 'itsme_disable_feed', 1);
 remove_action( 'wp_head', 'feed_links_extra', 3 );
 remove_action( 'wp_head', 'feed_links', 2 );
 
-add_filter( 'wp_sitemaps_enabled', '__return_false' );
-add_filter( 'rewrite_rules_array', 'disable_embeds_rewrites' );
-
-function disable_json_api () {
-
-  // Filters for WP-API version 1.x
-  add_filter( 'json_enabled', '__return_false' );
-  add_filter( 'json_jsonp_enabled', '__return_false' );
-
-  // Filters for WP-API version 2.x
-  add_filter( 'rest_enabled', '__return_false' );
-  add_filter( 'rest_jsonp_enabled', '__return_false' );
-
-}
-add_action( 'after_setup_theme', 'disable_json_api' );
-
 function my_custom_upload_mimes($mimes = array()) {
   $mimes['svg'] = "image/svg+xml";
   return $mimes;
