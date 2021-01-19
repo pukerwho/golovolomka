@@ -125,9 +125,13 @@
 					-ms-transform: translateY(-1px);
 					transform: translateY(-1px);
 					&:first-of-type {
+						-webkit-transform: translateY(-1px) rotate(-45deg);
+						-ms-transform: translateY(-1px) rotate(-45deg);
 						transform: translateY(-1px) rotate(-45deg);
 					}
 					&:last-of-type {
+						-webkit-transform: translateY(-1px) rotate(45deg);
+						-ms-transform: translateY(-1px) rotate(45deg);
 						transform: translateY(-1px) rotate(45deg);
 					}
 				}
@@ -298,7 +302,11 @@
 		bottom: 1.5rem; left: 50%;
 		opacity: 0;
 		z-index: -1;
+		-webkit-transform: translateX(-50%);
+		-ms-transform: translateX(-50%);
 		transform: translateX(-50%);
+		-webkit-transition: opacity 0.35s;
+		-o-transition: opacity 0.35s;
 		transition: opacity 0.35s;
 		&.show {
 			opacity: 1;
@@ -322,20 +330,27 @@ footer {
 	position: fixed;
 	bottom: 2rem; left: 0; right: 0;
 	text-align: center;
+	opacity: 0;
+	visibility: hidden;
 	div	{
-		opacity: 0;
-		visibility: hidden;	
 		background-color: #222222;
+		-webkit-transform: translateY(100%) rotate(2deg);
+		-ms-transform: translateY(100%) rotate(2deg);
 		transform: translateY(100%) rotate(2deg);
+		-webkit-transition: all 0.5s;
+		-o-transition: all 0.5s;
 		transition: all 0.5s;
-		&.show {
-			visibility: visible;
-			opacity: 1;
-			transform: translateY(0) rotate(0);
-			transition: all 0.25s;
-		}	
 	}
-	
+	&.show {
+		visibility: visible;
+		opacity: 1;
+		-webkit-transform: translateY(0) rotate(0);
+		-ms-transform: translateY(0) rotate(0);
+		transform: translateY(0) rotate(0);
+		-webkit-transition: all 0.25s;
+		-o-transition: all 0.25s;
+		transition: all 0.25s;
+	}	
 }
 
 .share {
