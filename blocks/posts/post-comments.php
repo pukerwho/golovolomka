@@ -16,32 +16,22 @@ add_action( 'comment_form', 'output_hidden_field_in_comment_form' );
 
 <div class="mb-5">
 	<?php 
-		$args = array(
-			'fields' => array(
-				'author' => '<p class="comment-form-author"><label for="author">Имя</label> <input id="author" name="author" type="text" value="" size="30" /></p>',
-				'email' => '<p class="comment-form-email"><label for="email">E-mail</label> <input id="email" name="email" type="text" value="" size="30" /></p>',
-				'url' => '<p class="comment-form-url"><label for="url">Сайт</label> <input id="url" name="url" type="text" value="" size="30" /></p>'
-			)
-		 
-		);
-		comment_form( $args = array(), $post_id = null );
-
-		// comment_form([
-		// 	'comment_notes_before' => '',
-		// 	'title_reply' => '',
-		// 	'label_submit' => $comment_btn_text,
-		// 	'fields'               => [
-		// 		'author' => '<p class="comment-form-author">
-		// 			<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . $html_req . ' placeholder="' . $comment_name_text . '" />
-		// 		</p>',
-		// 		'email'  => '<p class="comment-form-email">
-		// 			<input id="email" name="email" ' . ( $html5 ? 'type="email"' : 'type="text"' ) . ' value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30" aria-describedby="email-notes"' . $aria_req . $html_req  . ' placeholder="Ваш Email" />
-		// 		</p>',
-		// 	],
-		// 	'comment_field' => '<p class="comment-form-comment">
-		// 		<textarea id="comment" name="comment" rows="5" placeholder="' . $comment_textarea_text . '" required="required"></textarea>
-		// 	</p>',
-		// ]); 
+		comment_form([
+			'comment_notes_before' => '',
+			'title_reply' => '',
+			'label_submit' => $comment_btn_text,
+			'fields'               => [
+				'author' => '<p class="comment-form-author">
+					<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . $html_req . ' placeholder="' . $comment_name_text . '" />
+				</p>',
+				'email'  => '<p class="comment-form-email">
+					<input id="email" name="email" ' . ( $html5 ? 'type="email"' : 'type="text"' ) . ' value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30" aria-describedby="email-notes"' . $aria_req . $html_req  . ' placeholder="Ваш Email" />
+				</p>',
+			],
+			'comment_field' => '<p class="comment-form-comment">
+				<textarea id="comment" name="comment" rows="5" placeholder="' . $comment_textarea_text . '" required="required"></textarea>
+			</p>',
+		]); 
 	?>
 </div>
 
