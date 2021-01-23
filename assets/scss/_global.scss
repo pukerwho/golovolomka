@@ -427,6 +427,12 @@ footer {
 		background: rgba(0,0,0,0.4);
 		visibility: visible;
 		z-index: 9;
-	}
-	
+	}	
+}
+
+.wp-block-code {
+	color: rgba(41, 41, 41, 1);
+	background: rgba(242, 242, 242, 1);
+	padding: 1.75rem;
+	margin-bottom: 2rem;
 }
