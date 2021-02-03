@@ -6,14 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="yandex-verification" content="ae769d5c6d6ad071" />
 
-
-  <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
-  <link rel="profile" href="http://gmpg.org/xfn/11">
   <link rel="apple-touch-icon" href="<?php bloginfo('template_url'); ?>/img/logo.svg">
 
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;500;700&display=swap" crossorigin>
-  <!-- <link rel="stylesheet" href="../css/style.css" inline> -->
 
   <?php
     wp_head();
@@ -22,7 +18,6 @@
 
 </head>
 <body <?php echo body_class(); ?>>
-  <!-- <div class="preloader"></div> -->
   
   <header class="header text-white py-5 px-4 lg:px-0">
     <div class="container mx-auto">
