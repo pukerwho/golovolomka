@@ -21,7 +21,7 @@
 					</div>
 				</div>
 				<main class="w-full lg:w-6/12 mx-0 lg:mx-4">
-					<article itemscope itemtype="http://schema.org/Article" class="mb-6">
+					<article class="mb-6">
 						<div class="px-2 lg:px-4 py-5">
 							<!-- Хлебные крошки -->
 							<div class="mb-5">
@@ -50,7 +50,7 @@
 							</div>
 
 							<!-- Тайтл -->
-							<h1 itemprop="headline" class="text-3xl font-bold mb-5"><?php the_title(); ?></h1>
+							<h1  class="text-3xl font-bold mb-5"><?php the_title(); ?></h1>
 
 							<!-- Хештеги -->
 							<div class="post-categories -mx-1 mb-5">
@@ -112,10 +112,10 @@
 							</div>
 
 							<!-- Заглавное фото -->
-							<img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'large') ?>" alt="<?php the_title(); ?>" loading="lazy" itemprop="image" class="w-full post-thumb object-cover mb-6">
+							<img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'large') ?>" alt="<?php the_title(); ?>" loading="lazy" class="w-full post-thumb object-cover mb-6">
 
 							<!-- Основной контент -->
-							<div itemprop="articleBody">
+							<div >
 								<?php the_content(); ?>	
 							</div>
 
