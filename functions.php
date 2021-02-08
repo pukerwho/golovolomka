@@ -75,7 +75,7 @@ remove_action( 'wp_head', 'wlwmanifest_link');
 remove_action('rest_api_init', 'wp_oembed_register_route');
 remove_filter('oembed_dataparse', 'wp_filter_oembed_result', 10);
 remove_action('wp_print_styles', 'print_emoji_styles');
-remove_filter('the_content', 'wptexturize');
+// remove_filter('the_content', 'wptexturize');
 
 remove_action( 'wp_head', 'feed_links_extra', 3 );
 remove_action( 'wp_head', 'feed_links', 2 );

@@ -17,6 +17,9 @@
 			<div class="text-xl text-left lg:text-center mx-auto mb-10">
 				<?php echo carbon_get_term_meta(get_queried_object_id(), 'crb_category_description'); ?>
 			</div>
+			<div class="content text-xl mx-auto mb-10">
+				<?php echo category_description(); ?>
+			</div>
 			<div>
 				<?php 
 				$current_term = get_queried_object_id();
