@@ -19,7 +19,6 @@
 							<?php the_title(); ?>
 						</a>
 					</div>
-					
 				<?php endwhile; endif; wp_reset_postdata(); ?>
 			</div>
 		</div>

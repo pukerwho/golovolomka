@@ -7,7 +7,7 @@
     			<div class="mb-4"><?php _e('Разбираемся в сайтах. Делаем жизнь вебмастера проще.', 'totop'); ?></div>
   				<div class="footer-social social mb-4">
   					<ul class="flex items-center">
-  						<li><a href="https://www.facebook.com/time2top" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/icons/facebook.svg" width="22" alt="Facebook"></a></li>
+  						<li><a href="https://www.facebook.com/time2top/" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/icons/facebook.svg" width="22" alt="Facebook"></a></li>
   						<li class="px-4"><a href="https://www.instagram.com/time2top/" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/icons/instagram.svg" width="22" alt="instagram"></a></li>
   						<li><a href="https://www.youtube.com/channel/UCLFjGPaobP5RrvweG-p_lpA" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/icons/youtube.svg" width="25" alt="Youtube"></a></li>
   					</ul>
@@ -45,7 +45,7 @@
     		<div class="w-full lg:w-1/5 px-2 mb-4 lg:mb-0">
     			<div>
     				<ul>
-    					<li><a href="/contacts" class="font-bold text-custom-yellow"><?php _e('Написать нам', 'totop'); ?></a></li>
+    					<li><a href="/contacts/" class="font-bold text-custom-yellow"><?php _e('Написать нам', 'totop'); ?></a></li>
     				</ul>
     			</div>
     		</div>
