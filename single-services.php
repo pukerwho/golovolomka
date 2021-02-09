@@ -39,28 +39,31 @@
 						<?php the_content(); ?>
 					</div>
 				</div>
-				<div class="sticky w-full lg:w-4/12 mx-0 py-8 px-2 lg:pl-5 lg:pr-10" style="top: 1rem;">
-					<div class="sidebar-block relative shadow-sm rounded-md p-5 pt-16 pb-10">
-						<div class="services_icon">
-							<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/icons/services.svg" width="80">
-						</div>
-						<div class="text-center text-2xl font-bold mb-5">
-							Заказать услугу
-						</div>
-						<div class="text-center mb-5">
-							Чтобы заказать услугу, вам достаточно с нами связаться. Сделать это вы можете удобным для вас способом.
-						</div>
-						<div class="mb-5">
-							<a href="tg://resolve?domain=time2top" class="block bg-blue-500 text-white text-center text-xl shadow-lg rounded-md p-3">
-								Telegram	
-							</a>
-						</div>
-						<div>
-							<a href="mailto:info@timeto.top" class="block bg-custom-black text-custom-yellow text-center text-xl shadow-lg rounded-md p-3">
-								Email
-							</a>
+				<div class="w-full lg:w-4/12 mx-0 py-8 px-2 lg:pl-5 lg:pr-10">
+					<div class="sticky" style="top: 1rem;">
+						<div class="sidebar-block relative shadow-sm rounded-md p-5 pt-16 pb-10">
+							<div class="services_icon">
+								<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/icons/services.svg" width="80">
+							</div>
+							<div class="text-center text-2xl font-bold mb-5">
+								Заказать услугу
+							</div>
+							<div class="text-center mb-5">
+								Чтобы заказать услугу, вам достаточно с нами связаться. Сделать это вы можете удобным для вас способом.
+							</div>
+							<div class="mb-5">
+								<a href="tg://resolve?domain=time2top" class="block bg-blue-500 text-white text-center text-xl shadow-lg rounded-md p-3">
+									Telegram	
+								</a>
+							</div>
+							<div>
+								<a href="mailto:info@timeto.top" class="block bg-custom-black text-custom-yellow text-center text-xl shadow-lg rounded-md p-3">
+									Email
+								</a>
+							</div>
 						</div>
 					</div>
+					
 				</div>
 			</div>
 		</div>
