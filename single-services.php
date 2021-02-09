@@ -6,9 +6,9 @@
 	<div class="container mx-auto px-2 lg:px-0">
 		<div class="bg-white shadow-md rounded-md">
 			<!-- Хлебные крошки -->
-			<div class="pt-8 px-10 mb-5">
+			<div class="pt-8 px-2 lg:px-10 mb-5">
 				<div class="breadcrumbs" itemprop="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
-		      <ul class="flex">
+		      <ul class="flex flex-wrap">
 						<li itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem' class="breadcrumbs-item">
 							<a itemprop="item" href="<?php echo home_url(); ?>" class="breadcrumbs-link text-sm">
 								<span itemprop="name"><?php _e( 'Главная', 'restx' ); ?></span>

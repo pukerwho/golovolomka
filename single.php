@@ -31,7 +31,7 @@
 								} ?>
 								<?php if ($myterm): ?>
 									<div class="breadcrumbs" itemprop="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
-							      <ul class="flex">
+							      <ul class="flex flex-wrap">
 											<li itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem' class="breadcrumbs-item">
 												<a itemprop="item" href="<?php echo home_url(); ?>" class="breadcrumbs-link text-sm">
 													<span itemprop="name"><?php _e( 'Главная', 'restx' ); ?></span>
