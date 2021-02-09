@@ -41,9 +41,9 @@ function init() {
 				var nowScrollTop = $(this).scrollTop();
 				if(Math.abs(lastScrollTop - nowScrollTop) >= delta){
 					if (nowScrollTop > lastScrollTop){
-						$('.bottom-info').removeClass('show');
+						$('.single-post .bottom-info').removeClass('show');
 					} else {
-						$('.bottom-info').addClass('show');
+						$('.single-post .bottom-info').addClass('show');
 					}
 					lastScrollTop = nowScrollTop;
 				}

@@ -31,19 +31,6 @@
 				<a href="<?php the_permalink(); ?>" class="hover:text-blue-900"><?php the_title(); ?>	</a>
 			</div>
 
-			<!-- Хештеги -->
-			<div class="post-categories -mx-1 mb-5">
-				<?php 
-		    $post_tags = wp_get_post_terms(  get_the_ID() , 'hashtags', array( 'parent' => 0 ) );
-		    foreach($post_tags as $post_tag): ?>
-		    	<?php if ($post_tag): ?>
-						<a href="<?php echo get_term_link( $post_tag->term_id ); ?>" class="post-categories__link mx-1 p-2 rounded-md">
-					 		<?php echo $post_tag->name; ?>
-					 	</a>
-					<?php endif; ?>
-				<?php endforeach; ?>
-			</div>
-
 			<!-- COMMENTS -->
 			<div class="post-item__comments flex items-center text-sm">
 				<img src="<?php bloginfo('template_url'); ?>/img/icons/comments.svg" class="mr-2" alt="Комментарии">
