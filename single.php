@@ -14,7 +14,7 @@
 							foreach( $post_contents as $key => $post_content ): ?>
 								<?php $key = $key + 1; ?>
 								<li class="mb-1">
-									<a href="/#<?php echo $post_content['crb_post_content_link']; ?>"><?php echo $key; ?>. <?php echo $post_content['crb_post_content_title']; ?></a>
+									<a href="<?php echo get_the_permalink(); ?>/#<?php echo $post_content['crb_post_content_link']; ?>"><?php echo $key; ?>. <?php echo $post_content['crb_post_content_title']; ?></a>
 								</li>
 							<?php endforeach; ?>
 						</ul>	
