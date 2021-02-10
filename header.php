@@ -8,9 +8,7 @@
 
   <link rel="apple-touch-icon" href="<?php bloginfo('template_url'); ?>/img/logo.svg">
   <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
-  <link rel="profile" href="http://gmpg.org/xfn/11">
   <base href="/">
-  <link rel="alternate" hreflang="x-default" href="<?php echo home_url(); ?>">
 
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;500;700&display=swap" crossorigin>
